@@ -38,11 +38,11 @@
             <hr class="divider">
             <div class="list-group">
                 <a href="http://be.dgepuce.edu.ec" class="list-group-item">PUCE</a>
-                <a href="http://m.dgepuce.edu.ec" class="list-group-item">PUCEM</a>
-                <a href="http://sd.dgepuce.edu.ec" class="list-group-item">PUCESD</a>
-                <a href="http://sa.dgepuce.edu.ec" class="list-group-item">PUCESA</a>
-                <a href="http://se.dgepuce.edu.ec" class="list-group-item">PUCESE</a>
-                <a href="http://i.dgepuce.edu.ec" class="list-group-item">PUCEI</a>
+                <a href="http://bem.dgepuce.edu.ec" class="list-group-item">PUCEM</a>
+                <a href="http://besd.dgepuce.edu.ec" class="list-group-item">PUCESD</a>
+                <a href="http://besa.dgepuce.edu.ec" class="list-group-item">PUCESA</a>
+                <a href="http://bese.dgepuce.edu.ec" class="list-group-item">PUCESE</a>
+                <a href="http://bei.dgepuce.edu.ec" class="list-group-item">PUCEI</a>
             </div>
         </div>
 
