@@ -13,13 +13,16 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/ambato/estudiantes/{cedula}','AmbatoController@show');
+
 
 
 //--manabi
 Route::get('/manabi/estudiantes/{cedula}','ManabiController@show');
 
+//--santo domingo
+Route::get('/sdomingo/estudiantes/{cedula}','SDomingoController@show');
 
 
 //--ambato
+Route::get('/ambato/estudiantes/{cedula}','AmbatoController@show');
 Route::get('prueba','AmbatoController@prueba');
