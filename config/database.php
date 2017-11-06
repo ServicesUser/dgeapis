@@ -53,6 +53,16 @@ return [
             'strict' => true,
             'engine' => null,
         ],
+        'basep' => array(
+            'driver'    => 'mysql',
+            'host'      => env('DB_HOST', '127.0.0.1'),
+            'database'  => env('DB2_DATABASE', 'bolsaold'),
+            'username'  => env('DB2_USERNAME', 'root'),
+            'password'  => env('DB2_PASSWORD', ''),
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix'    => '',
+        ),
 
         'pgsql' => [
             'driver' => 'pgsql',
