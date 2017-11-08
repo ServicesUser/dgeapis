@@ -28,10 +28,14 @@ class AmbatoController extends Controller{
     }
 
     public function show($cedula){
-        $consulta   =   Estudiante::select('carreras_a.id_ca as carrera','nombre_ca as carreran','nombres_a as nombres','celular_a as celular','telefono_a as telefono','sexo_a as sexo','usuario_a as modalidad','porcentaje_a as porcentaje','ci_a as cedula','expediente_a as expediente','nivel_a as nivel','id_fa as facultad','pregrado_ca as pregrado')
+        $lista = ['val'=>false,'menssage'=>'No existen resultados'];
+        $resultado   =   Estudiante::select('carreras_a.id_ca as carrera','nombre_ca as carreran','nombres_a as nombres','celular_a as celular','telefono_a as telefono','sexo_a as sexo','usuario_a as modalidad','porcentaje_a as porcentaje','ci_a as cedula','expediente_a as expediente','nivel_a as nivel','id_fa as facultad','pregrado_ca as pregrado')
                                     ->join('carreras_a','carreras_a.id_ca','=','ambato.id_ca')
                                     ->where('ci_a',$cedula)->get();
-        return $consulta;
+        if(count($resultado)){
+            $lista=$resultado;
+        }
+        return $lista;
     }
 
 
