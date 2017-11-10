@@ -25,3 +25,7 @@ Route::get('/sdomingo/estudiantes/{cedula}','SDomingoController@show');
 //--ambato
 Route::get('/ambato/estudiantes/{cedula}'  ,'AmbatoController@show');
 Route::get('/ambato/actualizar','AmbatoController@actualizar');
+
+
+//--esmeraldas
+Route::get('/esmeraldas/estudiantes/{cedula}'  ,'EsmeraldasController@show');
