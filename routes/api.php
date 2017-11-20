@@ -29,3 +29,6 @@ Route::get('/ambato/actualizar','AmbatoController@actualizar');
 
 //--esmeraldas
 Route::get('/esmeraldas/estudiantes/{cedula}'  ,'EsmeraldasController@show');
+
+//--ibarra
+Route::get('/ibarra/estudiantes/{cedula}'  ,'IbarraController@show');

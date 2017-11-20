@@ -42,7 +42,7 @@
                 <a href="http://besd.dgepuce.edu.ec" class="list-group-item">PUCESD</a>
                 <a href="http://besa.dgepuce.edu.ec" class="list-group-item">PUCESA</a>
                 <a href="http://bese.dgepuce.edu.ec" class="list-group-item">PUCESE</a>
-                <a href="http://bei.dgepuce.edu.ec" class="list-group-item">PUCEI</a>
+                <a href="http://besi.dgepuce.edu.ec" class="list-group-item">PUCESI</a>
             </div>
         </div>
 
