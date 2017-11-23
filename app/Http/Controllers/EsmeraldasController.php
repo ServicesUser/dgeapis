@@ -25,28 +25,28 @@ class EsmeraldasController extends Controller{
                 "cedula"        =>  $cedula
             ]
         );
-        //return $response->body;
         $b=[];
-        foreach ($response->body as $item){
-            $a['nombres']   =   mb_convert_case($item->NOMBRES_COMPLETOS, MB_CASE_TITLE);
-            $a['nombre']    =   mb_convert_case($item->NOMBRES, MB_CASE_TITLE);
-            $a['apellido']  =   mb_convert_case($item->APELLIDOS, MB_CASE_TITLE);
-            $a['cedula']    =   $item->CEDULA;
-            $a['carrera']   =   $this->codigoCarrera($item->ESPECIALIDAD,'SEDE ESMERALDAS');
+        if($response && $response->body->name!=='Unauthorized'){
+            foreach ($response->body as $item){
+                $a['nombres']   =   mb_convert_case($item->NOMBRES_COMPLETOS, MB_CASE_TITLE);
+                $a['nombre']    =   mb_convert_case($item->NOMBRES, MB_CASE_TITLE);
+                $a['apellido']  =   mb_convert_case($item->APELLIDOS, MB_CASE_TITLE);
+                $a['cedula']    =   $item->CEDULA;
+                $a['carrera']   =   $this->codigoCarrera($item->ESPECIALIDAD,'SEDE ESMERALDAS');
 
-            $estudiante     =   Estudiante::where('ci_e',$a['cedula'])->where('id_ce',$a['carrera'])->first();
-            if(!$estudiante){
-                $estudiante             =   new Estudiante();
-                $estudiante->id_ce      =   $a['carrera'];
-                $estudiante->nombres_e  =   $a['nombres'];
-                $estudiante->nombre_e   =   $a['nombre'];
-                $estudiante->apellido_e =   $a['apellido'];
-                $estudiante->ci_e       =   $a['cedula'];
-                $estudiante->save();
+                $estudiante     =   Estudiante::where('ci_e',$a['cedula'])->where('id_ce',$a['carrera'])->first();
+                if(!$estudiante){
+                    $estudiante             =   new Estudiante();
+                    $estudiante->id_ce      =   $a['carrera'];
+                    $estudiante->nombres_e  =   $a['nombres'];
+                    $estudiante->nombre_e   =   $a['nombre'];
+                    $estudiante->apellido_e =   $a['apellido'];
+                    $estudiante->ci_e       =   $a['cedula'];
+                    $estudiante->save();
+                }
+                $b[]=$a;
             }
-            $b[]=$a;
         }
-
         return $b;
     }
 
