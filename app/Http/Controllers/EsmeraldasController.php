@@ -21,12 +21,12 @@ class EsmeraldasController extends Controller{
                 "Accept" => "application/json"
             ],
             [
-                "access-token"  =>  'dS0ryijUrDYsI-eX-r34qV28MHWQ-5Gr',
+                "access-token"  =>  '-aexlhieqha83J5uaReuQJNWOAgj8Jzj',
                 "cedula"        =>  $cedula
             ]
         );
         $b=[];
-        if($response && $response->body->name!=='Unauthorized'){
+        if($response && !isset($response->body->name)){
             foreach ($response->body as $item){
                 $a['nombres']   =   mb_convert_case($item->NOMBRES_COMPLETOS, MB_CASE_TITLE);
                 $a['nombre']    =   mb_convert_case($item->NOMBRES, MB_CASE_TITLE);
