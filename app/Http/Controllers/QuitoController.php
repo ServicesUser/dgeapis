@@ -7,7 +7,7 @@ use function MongoDB\BSON\toJSON;
 use Unirest\Request as Unirest;
 
 class QuitoController extends Controller{
-    public function show2($cedula){
+    public function show($cedula){
         $response = Unirest::get("https://www.puce.edu.ec/intranet/servicios/datos/infoestudiante/cedula/$cedula",
             [
                 "Accept" => "application/json"
@@ -15,7 +15,7 @@ class QuitoController extends Controller{
         );
         return ([$response]);
     }
-    public function show($cedula){
+    public function show2($cedula){
         $curl = curl_init();
         curl_setopt_array($curl, array(
             CURLOPT_URL => "https://www.puce.edu.ec/intranet/servicios/datos/infoestudiante/cedula/$cedula",
