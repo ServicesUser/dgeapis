@@ -14,6 +14,10 @@ use Illuminate\Http\Request;
 */
 
 
+//quito
+Route::get('/quito/autenticacion/{token}','Autenticacion@token_quito');
+Route::get('/quito/estudiantes/{cedula}','QuitoController@show');
+
 
 
 //--manabi
