@@ -20,14 +20,14 @@ class QuitoController extends Controller{
         curl_setopt_array($curl, array(
             CURLOPT_URL => "https://www.puce.edu.ec/intranet/servicios/datos/infoestudiante/cedula/$cedula",
             CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => "",
+            CURLOPT_ENCODING => "gzip",
             CURLOPT_MAXREDIRS => 10,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => array(
                 "cache-control: no-cache",
-                "postman-token: 4b608e15-36de-e913-2766-cfa1f590aade"
+                "postman-token: fc5ee618-7cf9-a0c8-14fc-f27c237f31bd"
             ),
         ));
 
