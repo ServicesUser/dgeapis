@@ -14,3 +14,4 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('dni/{dni?}',"ConsultaInterface@show");

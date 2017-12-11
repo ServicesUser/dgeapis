@@ -8,38 +8,23 @@ use Unirest\Request as Unirest;
 
 class QuitoController extends Controller{
     public function show($cedula){
+        Unirest::verifyPeer(true);
         $response = Unirest::get("https://www.puce.edu.ec/intranet/servicios/datos/infoestudiante/cedula/$cedula",
             [
-                "Accept" => "application/json"
+                "accept"            =>  "rest",
+                "postman-token"     =>  "3e4aabde-2190-47f7-991d-01cfacc3cac8",
+                "user-agent"        =>  "PostmanRuntime/6.4.1",
+                "cookie"            =>  "visid_incap_1482638=LPshB7BZTFioOlSh9/jgiwx0HFoAAAAAQUIPAAAAAACpdSKY2sJUnrZTYpt3Xggi; incap_ses_623_1482638=ym1gf6XK8R770ATum1elCHg3H1oAAAAAb4BATsFWnjuf6qrxpsc02Q==; incap_ses_994_1482638=oYMRbNkOZjTCBExwx2XLDaQBH1oAAAAApQS7gRTe9zmveMsldxyi8w==; ci_session=8a2ecada4ffed17cc7f16e2dbf077b6688bc811e",
+                "cache-control"     =>  "no-cache",
+                "accept-encoding"   =>  "gzip, defalte",
+                "referer"           =>  "https://www.puce.edu.ec/intranet/servicios/datos/infoestudiante/cedula/$cedula"
             ]
         );
-        return ([$response]);
-    }
-    public function show2($cedula){
-        $curl = curl_init();
-        curl_setopt_array($curl, array(
-            CURLOPT_URL => "https://www.puce.edu.ec/intranet/servicios/datos/infoestudiante/cedula/$cedula",
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => "gzip",
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 30,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => "GET",
-            CURLOPT_HTTPHEADER => array(
-                "cache-control: no-cache",
-                "postman-token: fc5ee618-7cf9-a0c8-14fc-f27c237f31bd"
-            ),
-        ));
-
-        $response = curl_exec($curl);
-        $err = curl_error($curl);
-
-        curl_close($curl);
-
-        if ($err) {
-            return $err;
-        } else {
-            return json_decode($response);
+        if($response->headers['Content-Type']==='application/json')
+            return ($response->body);
+        else{
+            return (['val'=>false]);
         }
     }
+
 }

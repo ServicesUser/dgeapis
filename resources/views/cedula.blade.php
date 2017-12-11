@@ -36,14 +36,13 @@
             <h2 class="text-center text-lg text-uppercase my-0">Sistema de Bolsa de Empleo y Pasantías <strong>PUCE</strong>
             </h2>
             <hr class="divider">
-            <div class="list-group">
-                <a href="http://be.dgepuce.edu.ec" class="list-group-item">PUCE</a>
-                <a href="http://bem.dgepuce.edu.ec" class="list-group-item">PUCEM</a>
-                <a href="http://besd.dgepuce.edu.ec" class="list-group-item">PUCESD</a>
-                <a href="http://besa.dgepuce.edu.ec" class="list-group-item">PUCESA</a>
-                <a href="http://bese.dgepuce.edu.ec" class="list-group-item">PUCESE</a>
-                <a href="http://besi.dgepuce.edu.ec" class="list-group-item">PUCESI</a>
+            <div class="input-group">
+                <span class="input-group-addon">DNI/CI</span>
+                <input type="text" class="form-control"/>
+                <span class="input-group-btn"><button class="btn btn-info">Buscar</button></span>
             </div>
+            <br>
+
         </div>
 
     </div>
