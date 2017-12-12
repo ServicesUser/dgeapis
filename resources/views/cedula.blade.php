@@ -36,8 +36,9 @@
             <h2 class="text-center text-lg text-uppercase my-0">Sistema de Bolsa de Empleo y Pasantías <strong>PUCE</strong>
             </h2>
             <hr class="divider">
-            <buscar url="{{route('consulta','')}}"></buscar>
+            <buscar url="{{route('consulta')}}"></buscar>
             <br>
+            @if(isset($datos))
             @if ($datos['val']===true)
             <div class="text-left">
                 <div class="center-block">
@@ -75,9 +76,7 @@
                     </div>
                 </div>
             @endif
-
-
-
+            @endif
         </div>
 
     </div>

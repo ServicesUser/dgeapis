@@ -14,4 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('dni/{dni?}',"ConsultaInterface@show")->name('consulta');
+Route::get('dni',"ConsultaInterface@index")->name('consulta');
+Route::get('dni/{dni}',"ConsultaInterface@show");
