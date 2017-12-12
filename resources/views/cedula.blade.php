@@ -36,12 +36,47 @@
             <h2 class="text-center text-lg text-uppercase my-0">Sistema de Bolsa de Empleo y Pasantías <strong>PUCE</strong>
             </h2>
             <hr class="divider">
-            <div class="input-group">
-                <span class="input-group-addon">DNI/CI</span>
-                <input type="text" class="form-control"/>
-                <span class="input-group-btn"><button class="btn btn-info">Buscar</button></span>
-            </div>
+            <buscar url="{{route('consulta','')}}"></buscar>
             <br>
+            @if ($datos['val']===true)
+            <div class="text-left">
+                <div class="center-block">
+                    <img src="{{$datos['foto1']}}"  class="center-block img-thumbnail img-responsive"/>
+                    <img src="{{$datos['foto2']}}"  class="center-block img-thumbnail img-responsive"/>
+
+                </div>
+                <p><strong>Nombres</strong> {{$datos['nombres']}}</p>
+                <p><strong>SEDE</strong> {{$datos['sede']}}</p>
+                <p><strong>Cuenta en BE</strong>
+                    @if($datos['cuenta']===1)
+                        SI
+                    @else
+                        NO
+                    @endif
+                </p>
+                <p><strong>Impedimentos</strong>
+                    @if($datos['impedimentos']===true)
+                        Tiene Impedimentos
+                    @else
+                        NO
+                    @endif
+                </p>
+                @foreach($datos['carrera'] as $item)
+                    <p>-{{$item['facultad']}}</p>
+                    <p>
+                        {{$item['carrera']}} <strong>{{$item['aprobacion']}}%</strong>
+                    </p>
+                @endforeach
+            </div>
+            @else
+                <div class="text-center">
+                    <div class="alert alert-warning">
+                        <h1>No existe</h1>
+                    </div>
+                </div>
+            @endif
+
+
 
         </div>
 

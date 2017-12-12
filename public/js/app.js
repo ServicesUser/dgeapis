@@ -987,7 +987,7 @@ window.Vue = __webpack_require__(35);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', __webpack_require__(38));
+Vue.component('buscar', __webpack_require__(38));
 
 var app = new Vue({
   el: '#app'
@@ -42535,7 +42535,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\Example.vue"
+Component.options.__file = "resources\\assets\\js\\components\\buscar.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
 
 /* hot reload */
@@ -42545,9 +42545,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-2f50dd88", Component.options)
+    hotAPI.createRecord("data-v-7314d1f7", Component.options)
   } else {
-    hotAPI.reload("data-v-2f50dd88", Component.options)
+    hotAPI.reload("data-v-7314d1f7", Component.options)
 ' + '  }
   module.hot.dispose(function (data) {
     disposed = true
@@ -42680,19 +42680,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    mounted: function mounted() {
-        console.log('Component mounted.');
-    }
+    props: ['url'],
+    data: function data() {
+        return {
+            dni: ''
+        };
+    },
+    methods: {
+        buscar: function buscar() {
+            window.location.replace(this.url + '/' + this.dni);
+        }
+    },
+    mounted: function mounted() {}
 });
 
 /***/ }),
@@ -42703,38 +42704,46 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-md-8 col-md-offset-2" }, [
-          _c("div", { staticClass: "panel panel-default" }, [
-            _c("div", { staticClass: "panel-heading" }, [
-              _vm._v("Example Component")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "panel-body" }, [
-              _vm._v(
-                "\n                    I'm an example component!\n                "
-              )
-            ])
-          ])
-        ])
+  return _c("div", { staticClass: "input-group" }, [
+    _c("span", { staticClass: "input-group-addon" }, [_vm._v("DNI/CI")]),
+    _vm._v(" "),
+    _c("input", {
+      directives: [
+        { name: "model", rawName: "v-model", value: _vm.dni, expression: "dni" }
+      ],
+      staticClass: "form-control",
+      attrs: { type: "text" },
+      domProps: { value: _vm.dni },
+      on: {
+        keyup: function($event) {
+          if (!("button" in $event) && $event.keyCode !== 13) {
+            return null
+          }
+          _vm.buscar($event)
+        },
+        input: function($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.dni = $event.target.value
+        }
+      }
+    }),
+    _vm._v(" "),
+    _c("span", { staticClass: "input-group-btn" }, [
+      _c("button", { staticClass: "btn btn-info", on: { click: _vm.buscar } }, [
+        _vm._v("Buscar")
       ])
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-2f50dd88", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-7314d1f7", module.exports)
   }
 }
 
