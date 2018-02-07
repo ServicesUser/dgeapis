@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use function MongoDB\BSON\toJSON;
 use Unirest\Request as Unirest;
 
 class QuitoController extends Controller{
@@ -12,7 +11,6 @@ class QuitoController extends Controller{
         $response = Unirest::get("https://www.puce.edu.ec/intranet/servicios/datos/infoestudiante/cedula/$cedula",
             [
                 "accept"            =>  "rest",
-                "referer"           =>  "https://www.puce.edu.ec/intranet/servicios/datos/infoestudiante/cedula/$cedula"
             ]
         );
         if($response->headers['Content-Type']==='application/json')
@@ -22,4 +20,17 @@ class QuitoController extends Controller{
         }
     }
 
+    public function show2($token){
+        Unirest::verifyPeer(false);
+        $response = Unirest::get("https://www.puce.edu.ec/intranet/servicios/datos/usuario/id/$token",
+            [
+                "accept"            =>  "rest",
+            ]
+        );
+        if($response->headers['Content-Type']==='application/json')
+            return ($response->body);
+        else{
+            return (['val'=>false]);
+        }
+    }
 }
