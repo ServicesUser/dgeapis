@@ -8,11 +8,7 @@ use Unirest\Request as Unirest;
 class QuitoController extends Controller{
     public function show($cedula){
         Unirest::verifyPeer(false);
-        $response = Unirest::get("https://www.puce.edu.ec/intranet/servicios/datos/infoestudiante/cedula/$cedula",
-            [
-                "Accept" => "application/rest"
-            ]
-        );
+        $response = Unirest::get("https://www.puce.edu.ec/intranet/servicios/datos/infoestudiante/cedula/$cedula");
         if($response->headers['Content-Type']==='application/json')
             return ($response->body);
         else{
@@ -22,11 +18,7 @@ class QuitoController extends Controller{
 
     public function show2($token){
         Unirest::verifyPeer(false);
-        $response = Unirest::get("https://www.puce.edu.ec/intranet/servicios/datos/usuario/id/$token",
-            [
-                "Accept" => "application/rest"
-            ]
-        );
+        $response = Unirest::get("https://www.puce.edu.ec/intranet/servicios/datos/usuario/id/$token");
         if($response->headers['Content-Type']==='application/json')
             return (collect($response->body));
         else
