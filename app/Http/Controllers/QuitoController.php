@@ -10,7 +10,7 @@ class QuitoController extends Controller{
         Unirest::verifyPeer(false);
         $response = Unirest::get("https://www.puce.edu.ec/intranet/servicios/datos/infoestudiante/cedula/$cedula",
             [
-                "accept"            =>  "rest",
+                "accept"            =>  "application/rest",
             ]
         );
         if($response->headers['Content-Type']==='application/json')
@@ -24,13 +24,12 @@ class QuitoController extends Controller{
         Unirest::verifyPeer(false);
         $response = Unirest::get("https://www.puce.edu.ec/intranet/servicios/datos/usuario/id/$token",
             [
-                "accept"            =>  "rest",
+                "accept"            =>  "application/rest",
             ]
         );
         if($response->headers['Content-Type']==='application/json')
             return (collect($response->body));
-        else{
+        else
             return (['val'=>false]);
-        }
     }
 }
