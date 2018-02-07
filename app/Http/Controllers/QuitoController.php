@@ -28,7 +28,7 @@ class QuitoController extends Controller{
             ]
         );
         if($response->headers['Content-Type']==='application/json')
-            return ($response->body);
+            return (collect($response->body));
         else{
             return (['val'=>false]);
         }
