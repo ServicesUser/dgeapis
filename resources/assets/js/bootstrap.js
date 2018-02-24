@@ -13,6 +13,11 @@ try {
     require('bootstrap-sass');
 } catch (e) {}
 
+let moment = require('moment');
+require('moment/locale/es');
+moment.locale('es');
+window.moment=moment();
+//console.log(moment().format('MMMM Do YYYY, h:mm:ss a'));
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the

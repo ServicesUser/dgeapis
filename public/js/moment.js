@@ -1911,7 +1911,7 @@ function loadLocale(name) {
         try {
             oldLocale = globalLocale._abbr;
             var aliasedRequire = require;
-            __webpack_require__(137)("./" + name);
+            __webpack_require__(132)("./" + name);
             getSetGlobalLocale(oldLocale);
         } catch (e) {}
     }
@@ -4917,33 +4917,6 @@ module.exports = {
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1,eval)("this");
-} catch(e) {
-	// This works if the window reference is available
-	if(typeof window === "object")
-		g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -5038,6 +5011,33 @@ var es = moment.defineLocale('es', {
 return es;
 
 })));
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
 
 
 /***/ }),
@@ -17302,12 +17302,274 @@ module.exports = function normalizeComponent (
 /* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(132);
+__webpack_require__(0);
+__webpack_require__(2);
+__webpack_require__(133);
 module.exports = __webpack_require__(173);
 
 
 /***/ }),
 /* 132 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": 6,
+	"./af.js": 6,
+	"./ar": 7,
+	"./ar-dz": 8,
+	"./ar-dz.js": 8,
+	"./ar-kw": 9,
+	"./ar-kw.js": 9,
+	"./ar-ly": 10,
+	"./ar-ly.js": 10,
+	"./ar-ma": 11,
+	"./ar-ma.js": 11,
+	"./ar-sa": 12,
+	"./ar-sa.js": 12,
+	"./ar-tn": 13,
+	"./ar-tn.js": 13,
+	"./ar.js": 7,
+	"./az": 14,
+	"./az.js": 14,
+	"./be": 15,
+	"./be.js": 15,
+	"./bg": 16,
+	"./bg.js": 16,
+	"./bm": 17,
+	"./bm.js": 17,
+	"./bn": 18,
+	"./bn.js": 18,
+	"./bo": 19,
+	"./bo.js": 19,
+	"./br": 20,
+	"./br.js": 20,
+	"./bs": 21,
+	"./bs.js": 21,
+	"./ca": 22,
+	"./ca.js": 22,
+	"./cs": 23,
+	"./cs.js": 23,
+	"./cv": 24,
+	"./cv.js": 24,
+	"./cy": 25,
+	"./cy.js": 25,
+	"./da": 26,
+	"./da.js": 26,
+	"./de": 27,
+	"./de-at": 28,
+	"./de-at.js": 28,
+	"./de-ch": 29,
+	"./de-ch.js": 29,
+	"./de.js": 27,
+	"./dv": 30,
+	"./dv.js": 30,
+	"./el": 31,
+	"./el.js": 31,
+	"./en-au": 32,
+	"./en-au.js": 32,
+	"./en-ca": 33,
+	"./en-ca.js": 33,
+	"./en-gb": 34,
+	"./en-gb.js": 34,
+	"./en-ie": 35,
+	"./en-ie.js": 35,
+	"./en-nz": 36,
+	"./en-nz.js": 36,
+	"./eo": 37,
+	"./eo.js": 37,
+	"./es": 2,
+	"./es-do": 38,
+	"./es-do.js": 38,
+	"./es-us": 39,
+	"./es-us.js": 39,
+	"./es.js": 2,
+	"./et": 40,
+	"./et.js": 40,
+	"./eu": 41,
+	"./eu.js": 41,
+	"./fa": 42,
+	"./fa.js": 42,
+	"./fi": 43,
+	"./fi.js": 43,
+	"./fo": 44,
+	"./fo.js": 44,
+	"./fr": 45,
+	"./fr-ca": 46,
+	"./fr-ca.js": 46,
+	"./fr-ch": 47,
+	"./fr-ch.js": 47,
+	"./fr.js": 45,
+	"./fy": 48,
+	"./fy.js": 48,
+	"./gd": 49,
+	"./gd.js": 49,
+	"./gl": 50,
+	"./gl.js": 50,
+	"./gom-latn": 51,
+	"./gom-latn.js": 51,
+	"./gu": 52,
+	"./gu.js": 52,
+	"./he": 53,
+	"./he.js": 53,
+	"./hi": 54,
+	"./hi.js": 54,
+	"./hr": 55,
+	"./hr.js": 55,
+	"./hu": 56,
+	"./hu.js": 56,
+	"./hy-am": 57,
+	"./hy-am.js": 57,
+	"./id": 58,
+	"./id.js": 58,
+	"./is": 59,
+	"./is.js": 59,
+	"./it": 60,
+	"./it.js": 60,
+	"./ja": 61,
+	"./ja.js": 61,
+	"./jv": 62,
+	"./jv.js": 62,
+	"./ka": 63,
+	"./ka.js": 63,
+	"./kk": 64,
+	"./kk.js": 64,
+	"./km": 65,
+	"./km.js": 65,
+	"./kn": 66,
+	"./kn.js": 66,
+	"./ko": 67,
+	"./ko.js": 67,
+	"./ky": 68,
+	"./ky.js": 68,
+	"./lb": 69,
+	"./lb.js": 69,
+	"./lo": 70,
+	"./lo.js": 70,
+	"./lt": 71,
+	"./lt.js": 71,
+	"./lv": 72,
+	"./lv.js": 72,
+	"./me": 73,
+	"./me.js": 73,
+	"./mi": 74,
+	"./mi.js": 74,
+	"./mk": 75,
+	"./mk.js": 75,
+	"./ml": 76,
+	"./ml.js": 76,
+	"./mr": 77,
+	"./mr.js": 77,
+	"./ms": 78,
+	"./ms-my": 79,
+	"./ms-my.js": 79,
+	"./ms.js": 78,
+	"./mt": 80,
+	"./mt.js": 80,
+	"./my": 81,
+	"./my.js": 81,
+	"./nb": 82,
+	"./nb.js": 82,
+	"./ne": 83,
+	"./ne.js": 83,
+	"./nl": 84,
+	"./nl-be": 85,
+	"./nl-be.js": 85,
+	"./nl.js": 84,
+	"./nn": 86,
+	"./nn.js": 86,
+	"./pa-in": 87,
+	"./pa-in.js": 87,
+	"./pl": 88,
+	"./pl.js": 88,
+	"./pt": 89,
+	"./pt-br": 90,
+	"./pt-br.js": 90,
+	"./pt.js": 89,
+	"./ro": 91,
+	"./ro.js": 91,
+	"./ru": 92,
+	"./ru.js": 92,
+	"./sd": 93,
+	"./sd.js": 93,
+	"./se": 94,
+	"./se.js": 94,
+	"./si": 95,
+	"./si.js": 95,
+	"./sk": 96,
+	"./sk.js": 96,
+	"./sl": 97,
+	"./sl.js": 97,
+	"./sq": 98,
+	"./sq.js": 98,
+	"./sr": 99,
+	"./sr-cyrl": 100,
+	"./sr-cyrl.js": 100,
+	"./sr.js": 99,
+	"./ss": 101,
+	"./ss.js": 101,
+	"./sv": 102,
+	"./sv.js": 102,
+	"./sw": 103,
+	"./sw.js": 103,
+	"./ta": 104,
+	"./ta.js": 104,
+	"./te": 105,
+	"./te.js": 105,
+	"./tet": 106,
+	"./tet.js": 106,
+	"./th": 107,
+	"./th.js": 107,
+	"./tl-ph": 108,
+	"./tl-ph.js": 108,
+	"./tlh": 109,
+	"./tlh.js": 109,
+	"./tr": 110,
+	"./tr.js": 110,
+	"./tzl": 111,
+	"./tzl.js": 111,
+	"./tzm": 112,
+	"./tzm-latn": 113,
+	"./tzm-latn.js": 113,
+	"./tzm.js": 112,
+	"./uk": 114,
+	"./uk.js": 114,
+	"./ur": 115,
+	"./ur.js": 115,
+	"./uz": 116,
+	"./uz-latn": 117,
+	"./uz-latn.js": 117,
+	"./uz.js": 116,
+	"./vi": 118,
+	"./vi.js": 118,
+	"./x-pseudo": 119,
+	"./x-pseudo.js": 119,
+	"./yo": 120,
+	"./yo.js": 120,
+	"./zh-cn": 121,
+	"./zh-cn.js": 121,
+	"./zh-hk": 122,
+	"./zh-hk.js": 122,
+	"./zh-tw": 123,
+	"./zh-tw.js": 123
+};
+function webpackContext(req) {
+	return __webpack_require__(webpackContextResolve(req));
+};
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) // check for number or string
+		throw new Error("Cannot find module '" + req + "'.");
+	return id;
+};
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 132;
+
+/***/ }),
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -17317,7 +17579,7 @@ module.exports = __webpack_require__(173);
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-__webpack_require__(133);
+__webpack_require__(134);
 
 window.Vue = __webpack_require__(157);
 
@@ -17335,11 +17597,11 @@ var app = new Vue({
 });
 
 /***/ }),
-/* 133 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-window._ = __webpack_require__(134);
+window._ = __webpack_require__(135);
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -17348,16 +17610,12 @@ window._ = __webpack_require__(134);
  */
 
 try {
-  window.$ = window.jQuery = __webpack_require__(135);
+  window.$ = window.jQuery = __webpack_require__(136);
 
-  __webpack_require__(136);
+  __webpack_require__(137);
 } catch (e) {}
 
-var moment = __webpack_require__(0);
-__webpack_require__(3);
 moment.locale('es');
-window.moment = moment();
-//console.log(moment().format('MMMM Do YYYY, h:mm:ss a'));
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
@@ -17398,7 +17656,7 @@ if (token) {
 // });
 
 /***/ }),
-/* 134 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -34487,10 +34745,10 @@ if (token) {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(5)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(5)(module)))
 
 /***/ }),
-/* 135 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -44750,7 +45008,7 @@ return jQuery;
 
 
 /***/ }),
-/* 136 */
+/* 137 */
 /***/ (function(module, exports) {
 
 /*!
@@ -47131,266 +47389,6 @@ if (typeof jQuery === 'undefined') {
 
 }(jQuery);
 
-
-/***/ }),
-/* 137 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var map = {
-	"./af": 6,
-	"./af.js": 6,
-	"./ar": 7,
-	"./ar-dz": 8,
-	"./ar-dz.js": 8,
-	"./ar-kw": 9,
-	"./ar-kw.js": 9,
-	"./ar-ly": 10,
-	"./ar-ly.js": 10,
-	"./ar-ma": 11,
-	"./ar-ma.js": 11,
-	"./ar-sa": 12,
-	"./ar-sa.js": 12,
-	"./ar-tn": 13,
-	"./ar-tn.js": 13,
-	"./ar.js": 7,
-	"./az": 14,
-	"./az.js": 14,
-	"./be": 15,
-	"./be.js": 15,
-	"./bg": 16,
-	"./bg.js": 16,
-	"./bm": 17,
-	"./bm.js": 17,
-	"./bn": 18,
-	"./bn.js": 18,
-	"./bo": 19,
-	"./bo.js": 19,
-	"./br": 20,
-	"./br.js": 20,
-	"./bs": 21,
-	"./bs.js": 21,
-	"./ca": 22,
-	"./ca.js": 22,
-	"./cs": 23,
-	"./cs.js": 23,
-	"./cv": 24,
-	"./cv.js": 24,
-	"./cy": 25,
-	"./cy.js": 25,
-	"./da": 26,
-	"./da.js": 26,
-	"./de": 27,
-	"./de-at": 28,
-	"./de-at.js": 28,
-	"./de-ch": 29,
-	"./de-ch.js": 29,
-	"./de.js": 27,
-	"./dv": 30,
-	"./dv.js": 30,
-	"./el": 31,
-	"./el.js": 31,
-	"./en-au": 32,
-	"./en-au.js": 32,
-	"./en-ca": 33,
-	"./en-ca.js": 33,
-	"./en-gb": 34,
-	"./en-gb.js": 34,
-	"./en-ie": 35,
-	"./en-ie.js": 35,
-	"./en-nz": 36,
-	"./en-nz.js": 36,
-	"./eo": 37,
-	"./eo.js": 37,
-	"./es": 3,
-	"./es-do": 38,
-	"./es-do.js": 38,
-	"./es-us": 39,
-	"./es-us.js": 39,
-	"./es.js": 3,
-	"./et": 40,
-	"./et.js": 40,
-	"./eu": 41,
-	"./eu.js": 41,
-	"./fa": 42,
-	"./fa.js": 42,
-	"./fi": 43,
-	"./fi.js": 43,
-	"./fo": 44,
-	"./fo.js": 44,
-	"./fr": 45,
-	"./fr-ca": 46,
-	"./fr-ca.js": 46,
-	"./fr-ch": 47,
-	"./fr-ch.js": 47,
-	"./fr.js": 45,
-	"./fy": 48,
-	"./fy.js": 48,
-	"./gd": 49,
-	"./gd.js": 49,
-	"./gl": 50,
-	"./gl.js": 50,
-	"./gom-latn": 51,
-	"./gom-latn.js": 51,
-	"./gu": 52,
-	"./gu.js": 52,
-	"./he": 53,
-	"./he.js": 53,
-	"./hi": 54,
-	"./hi.js": 54,
-	"./hr": 55,
-	"./hr.js": 55,
-	"./hu": 56,
-	"./hu.js": 56,
-	"./hy-am": 57,
-	"./hy-am.js": 57,
-	"./id": 58,
-	"./id.js": 58,
-	"./is": 59,
-	"./is.js": 59,
-	"./it": 60,
-	"./it.js": 60,
-	"./ja": 61,
-	"./ja.js": 61,
-	"./jv": 62,
-	"./jv.js": 62,
-	"./ka": 63,
-	"./ka.js": 63,
-	"./kk": 64,
-	"./kk.js": 64,
-	"./km": 65,
-	"./km.js": 65,
-	"./kn": 66,
-	"./kn.js": 66,
-	"./ko": 67,
-	"./ko.js": 67,
-	"./ky": 68,
-	"./ky.js": 68,
-	"./lb": 69,
-	"./lb.js": 69,
-	"./lo": 70,
-	"./lo.js": 70,
-	"./lt": 71,
-	"./lt.js": 71,
-	"./lv": 72,
-	"./lv.js": 72,
-	"./me": 73,
-	"./me.js": 73,
-	"./mi": 74,
-	"./mi.js": 74,
-	"./mk": 75,
-	"./mk.js": 75,
-	"./ml": 76,
-	"./ml.js": 76,
-	"./mr": 77,
-	"./mr.js": 77,
-	"./ms": 78,
-	"./ms-my": 79,
-	"./ms-my.js": 79,
-	"./ms.js": 78,
-	"./mt": 80,
-	"./mt.js": 80,
-	"./my": 81,
-	"./my.js": 81,
-	"./nb": 82,
-	"./nb.js": 82,
-	"./ne": 83,
-	"./ne.js": 83,
-	"./nl": 84,
-	"./nl-be": 85,
-	"./nl-be.js": 85,
-	"./nl.js": 84,
-	"./nn": 86,
-	"./nn.js": 86,
-	"./pa-in": 87,
-	"./pa-in.js": 87,
-	"./pl": 88,
-	"./pl.js": 88,
-	"./pt": 89,
-	"./pt-br": 90,
-	"./pt-br.js": 90,
-	"./pt.js": 89,
-	"./ro": 91,
-	"./ro.js": 91,
-	"./ru": 92,
-	"./ru.js": 92,
-	"./sd": 93,
-	"./sd.js": 93,
-	"./se": 94,
-	"./se.js": 94,
-	"./si": 95,
-	"./si.js": 95,
-	"./sk": 96,
-	"./sk.js": 96,
-	"./sl": 97,
-	"./sl.js": 97,
-	"./sq": 98,
-	"./sq.js": 98,
-	"./sr": 99,
-	"./sr-cyrl": 100,
-	"./sr-cyrl.js": 100,
-	"./sr.js": 99,
-	"./ss": 101,
-	"./ss.js": 101,
-	"./sv": 102,
-	"./sv.js": 102,
-	"./sw": 103,
-	"./sw.js": 103,
-	"./ta": 104,
-	"./ta.js": 104,
-	"./te": 105,
-	"./te.js": 105,
-	"./tet": 106,
-	"./tet.js": 106,
-	"./th": 107,
-	"./th.js": 107,
-	"./tl-ph": 108,
-	"./tl-ph.js": 108,
-	"./tlh": 109,
-	"./tlh.js": 109,
-	"./tr": 110,
-	"./tr.js": 110,
-	"./tzl": 111,
-	"./tzl.js": 111,
-	"./tzm": 112,
-	"./tzm-latn": 113,
-	"./tzm-latn.js": 113,
-	"./tzm.js": 112,
-	"./uk": 114,
-	"./uk.js": 114,
-	"./ur": 115,
-	"./ur.js": 115,
-	"./uz": 116,
-	"./uz-latn": 117,
-	"./uz-latn.js": 117,
-	"./uz.js": 116,
-	"./vi": 118,
-	"./vi.js": 118,
-	"./x-pseudo": 119,
-	"./x-pseudo.js": 119,
-	"./yo": 120,
-	"./yo.js": 120,
-	"./zh-cn": 121,
-	"./zh-cn.js": 121,
-	"./zh-hk": 122,
-	"./zh-hk.js": 122,
-	"./zh-tw": 123,
-	"./zh-tw.js": 123
-};
-function webpackContext(req) {
-	return __webpack_require__(webpackContextResolve(req));
-};
-function webpackContextResolve(req) {
-	var id = map[req];
-	if(!(id + 1)) // check for number or string
-		throw new Error("Cannot find module '" + req + "'.");
-	return id;
-};
-webpackContext.keys = function webpackContextKeys() {
-	return Object.keys(map);
-};
-webpackContext.resolve = webpackContextResolve;
-module.exports = webpackContext;
-webpackContext.id = 137;
 
 /***/ }),
 /* 138 */
@@ -58833,7 +58831,7 @@ Vue$3.compile = compileToFunctions;
 
 module.exports = Vue$3;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(158).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(158).setImmediate))
 
 /***/ }),
 /* 158 */
@@ -59085,7 +59083,7 @@ exports.clearImmediate = clearImmediate;
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(125)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(125)))
 
 /***/ }),
 /* 160 */
@@ -59303,7 +59301,7 @@ exports = module.exports = __webpack_require__(166)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -59695,81 +59693,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
-__webpack_require__(171)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
+__webpack_require__(171);
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "estadisticas",
     data: function data() {
         return {
-            listaEmpresas: [],
-            empresasCargando: false,
-            empresasGrafico: null,
-
-            listaCvs: [],
-            cvsCargando: false,
-            cvsGrafico: null
+            listaEmpresas: []
         };
     },
     methods: {
-        empresasInicio: function empresasInicio() {
+        empresasChart: function empresasChart() {
             __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.setOptions({
                 colors: __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.map(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.getOptions().colors, function (color) {
                     return {
@@ -59783,12 +59718,13 @@ __webpack_require__(171)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                     };
                 })
             });
-            this.empresasGrafico = __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.chart('empresas-chart', {
+
+            __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.chart('empresas-chart', {
                 title: {
-                    text: 'Organizaciones por Sector'
+                    text: 'Pie point CSS'
                 },
                 subtitle: {
-                    text: window.moment.format('MMMM Do YYYY, h:mm:ss a') + '<br><b>' + this.listaEmpresas.lista.length + ' Organizaciones</b>'
+                    text: 'Reporte del ' + moment().format('MMMM Do YYYY, h:mm:ss a') + '<br><b>' + this.listaEmpresas.length + ' Organizaciones</b>'
                 },
                 chart: {
                     plotBackgroundColor: null,
@@ -59824,244 +59760,25 @@ __webpack_require__(171)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                 },
                 series: [{
                     type: 'pie',
-                    name: 'Sector',
+                    name: 'Prueba',
                     allowPointSelect: true,
-                    data: this.listaEmpresas.sectores,
+                    keys: ['name', 'y', 'selected', 'sliced'],
+                    data: [['Apples', 29.9, false], ['Pears', 71.5, false], ['Oranges', 106.4, false], ['Plums', 129.2, false], ['Bananas', 144.0, false], ['Peaches', 176.0, false], ['Prunes', 135.6, false], ['Avocados', 148.5, false]],
                     showInLegend: true
                 }]
             });
-        },
-        empresasChart: function empresasChart(tipo) {
-            if (tipo === 1) {
-                this.empresasGrafico.update({
-                    title: {
-                        text: 'Organizaciones por Sector'
-                    },
-                    subtitle: {
-                        text: window.moment.format('MMMM Do YYYY, h:mm:ss a') + '<br><b>' + this.listaEmpresas.lista.length + ' Organizaciones</b>'
-                    },
-                    chart: {
-                        plotBackgroundColor: null,
-                        plotBorderWidth: null,
-                        plotShadow: false,
-                        type: 'pie'
-                    },
-                    plotOptions: {
-                        pie: {
-                            allowPointSelect: true,
-                            cursor: 'pointer',
-                            dataLabels: {
-                                enabled: false,
-                                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-                                style: {
-                                    color: __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme && __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme.contrastTextColor || 'black'
-                                },
-                                connectorColor: 'silver'
-                            }
-                        }
-                    },
-                    credits: {
-                        enabled: true,
-                        href: "http://be.dgepuce.edu.ec",
-                        text: "be.dgepuce.edu.ec"
-                    },
-                    exporting: {
-                        filename: "Bolsa de Empleos y Pasantías PUCE ",
-                        enabled: true
-                    },
-                    tooltip: {
-                        pointFormat: '{point.percentage:.1f}%'
-                    },
-                    series: [{
-                        type: 'pie',
-                        name: 'Sector',
-                        allowPointSelect: true,
-                        data: this.listaEmpresas.sectores,
-                        showInLegend: true
-                    }]
-                });
-            }
-            if (tipo === 2) {
-                this.empresasGrafico.update({
-                    title: {
-                        text: 'Organizaciones por Sub-Sector'
-                    },
-                    subtitle: {
-                        text: window.moment.format('MMMM Do YYYY, h:mm:ss a') + '<br><b>' + this.listaEmpresas.lista.length + ' Organizaciones</b>'
-                    },
-                    chart: {
-                        plotBackgroundColor: null,
-                        plotBorderWidth: null,
-                        plotShadow: false,
-                        type: 'pie'
-                    },
-                    plotOptions: {
-                        pie: {
-                            allowPointSelect: true,
-                            cursor: 'pointer',
-                            dataLabels: {
-                                enabled: false,
-                                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-                                style: {
-                                    color: __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme && __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme.contrastTextColor || 'black'
-                                },
-                                connectorColor: 'silver'
-                            }
-                        }
-                    },
-                    credits: {
-                        enabled: true,
-                        href: "http://be.dgepuce.edu.ec",
-                        text: "be.dgepuce.edu.ec"
-                    },
-                    exporting: {
-                        filename: "Bolsa de Empleos y Pasantías PUCE ",
-                        enabled: true
-                    },
-                    tooltip: {
-                        pointFormat: '{point.percentage:.1f}%'
-                    },
-                    series: [{
-                        type: 'pie',
-                        name: 'SubSector',
-                        allowPointSelect: true,
-                        data: this.listaEmpresas.subsectores,
-                        showInLegend: true
-                    }]
-                });
-            }
-            if (tipo === 3) {
-                this.empresasGrafico.update({
-                    title: {
-                        text: 'Organizaciones por Tipo'
-                    },
-                    subtitle: {
-                        text: window.moment.format('MMMM Do YYYY, h:mm:ss a') + '<br><b>' + this.listaEmpresas.lista.length + ' Organizaciones</b>'
-                    },
-                    chart: {
-                        plotBackgroundColor: null,
-                        plotBorderWidth: null,
-                        plotShadow: false,
-                        type: 'pie'
-                    },
-                    plotOptions: {
-                        pie: {
-                            allowPointSelect: true,
-                            cursor: 'pointer',
-                            dataLabels: {
-                                enabled: false,
-                                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-                                style: {
-                                    color: __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme && __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme.contrastTextColor || 'black'
-                                },
-                                connectorColor: 'silver'
-                            }
-                        }
-                    },
-                    credits: {
-                        enabled: true,
-                        href: "http://be.dgepuce.edu.ec",
-                        text: "be.dgepuce.edu.ec"
-                    },
-                    exporting: {
-                        filename: "Bolsa de Empleos y Pasantías PUCE ",
-                        enabled: true
-                    },
-                    tooltip: {
-                        pointFormat: '{point.percentage:.1f}%'
-                    },
-                    series: [{
-                        type: 'pie',
-                        name: 'Tipos',
-                        allowPointSelect: true,
-                        data: this.listaEmpresas.tipos,
-                        showInLegend: true
-                    }]
-                });
-            }
         },
         cargarEmpresas: function cargarEmpresas() {
             var _this = this;
 
-            this.empresasCargando = false;
             axios.get('./api/estadisticas/empresas').then(function (response) {
                 _this.listaEmpresas = response.data;
-                _this.empresasCargando = true;
-                _this.empresasInicio();
+                _this.empresasChart();
             });
-        },
-
-        cvsInicio: function cvsInicio() {
-            this.cvsGrafico = __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.chart('cvschart', {
-                title: {
-                    text: 'Hojas de Vida por Carrera'
-                },
-                subtitle: {
-                    text: window.moment.format('MMMM Do YYYY, h:mm:ss a') + '<br><b>' + this.listaCvs.total.numero + ' Hojas de Vida</b>'
-                },
-                chart: {
-                    plotBackgroundColor: null,
-                    plotBorderWidth: null,
-                    plotShadow: false,
-                    type: 'pie'
-                },
-                plotOptions: {
-                    pie: {
-                        allowPointSelect: true,
-                        cursor: 'pointer',
-                        dataLabels: {
-                            enabled: false,
-                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-                            style: {
-                                color: __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme && __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme.contrastTextColor || 'black'
-                            },
-                            connectorColor: 'silver'
-                        }
-                    }
-                },
-                credits: {
-                    enabled: true,
-                    href: "http://be.dgepuce.edu.ec",
-                    text: "be.dgepuce.edu.ec"
-                },
-                exporting: {
-                    filename: "Bolsa de Empleos y Pasantías PUCE ",
-                    enabled: true
-                },
-                tooltip: {
-                    pointFormat: '{point.percentage:.1f}%'
-                },
-                series: [{
-                    type: 'pie',
-                    name: 'CVS',
-                    allowPointSelect: true,
-                    data: this.listaCvs.lista,
-                    showInLegend: true
-                }]
-            });
-        },
-
-        cargarCvs: function cargarCvs() {
-            var _this2 = this;
-
-            this.cvsCargando = false;
-            axios.get('./api/estadisticas/cvs').then(function (response) {
-                _this2.listaCvs = response.data;
-                _this2.cvsCargando = true;
-                _this2.cvsInicio();
-            });
-        }
-    },
-    computed: {
-        sumaCvs: function sumaCvs() {
-            return this.listaCvs.lista.reduce(function (total, value) {
-                return total + value.y;
-            }, 0);
         }
     },
     mounted: function mounted() {
         this.cargarEmpresas();
-        this.cargarCvs();
     }
 });
 
@@ -60512,177 +60229,37 @@ var render = function() {
         "div",
         {
           staticClass: "tab-pane active",
-          attrs: { id: "organizaciones", role: "tabpanel" }
+          attrs: { id: "DatosOrganizaciones", role: "tabpanel" }
         },
         [
-          _vm._m(1),
-          _vm._v(" "),
-          _vm.empresasCargando
-            ? _c("div", { staticClass: "tab-content" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "tab-pane active",
-                    attrs: { id: "DatosOrganizaciones", role: "tabpanel" }
-                  },
-                  [
-                    _c(
-                      "table",
-                      { staticClass: "table table-hover table-dark" },
-                      [
-                        _vm._m(2),
-                        _vm._v(" "),
-                        _c("tfoot", [
-                          _c("tr", [
-                            _vm._m(3),
-                            _vm._v(" "),
-                            _c("td", [
-                              _c("b", [
-                                _vm._v(_vm._s(_vm.listaEmpresas.lista.length))
-                              ])
-                            ])
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "tbody",
-                          _vm._l(_vm.listaEmpresas.lista, function(item) {
-                            return _c("tr", [
-                              _c("td", [_vm._v(_vm._s(item.empresa))]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v(_vm._s(item.sector))]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v(_vm._s(item.subsector))]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v(_vm._s(item.tipo))])
-                            ])
-                          })
-                        )
-                      ]
-                    )
-                  ]
-                ),
+          _c("table", { staticClass: "table table-hover table-dark" }, [
+            _vm._m(1),
+            _vm._v(" "),
+            _c("tfoot", [
+              _c("tr", [
+                _vm._m(2),
                 _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "tab-pane",
-                    attrs: { id: "GraficoOrganizaciones", role: "tabpanel" }
-                  },
-                  [
-                    _c(
-                      "div",
-                      {
-                        staticClass: "btn-group",
-                        attrs: { role: "group", "aria-label": "Basic example" }
-                      },
-                      [
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-secondary",
-                            attrs: { type: "button" },
-                            on: {
-                              click: function($event) {
-                                _vm.empresasChart(1)
-                              }
-                            }
-                          },
-                          [_vm._v("Sector")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-secondary",
-                            attrs: { type: "button" },
-                            on: {
-                              click: function($event) {
-                                _vm.empresasChart(2)
-                              }
-                            }
-                          },
-                          [_vm._v("Subsector")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-secondary",
-                            attrs: { type: "button" },
-                            on: {
-                              click: function($event) {
-                                _vm.empresasChart(3)
-                              }
-                            }
-                          },
-                          [_vm._v("Tipo")]
-                        )
-                      ]
-                    )
-                  ]
-                )
+                _c("td", [_c("b", [_vm._v(_vm._s(_vm.listaEmpresas.length))])])
               ])
-            : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c(
+              "tbody",
+              _vm._l(_vm.listaEmpresas, function(item) {
+                return _c("tr", [
+                  _c("td", [_vm._v(_vm._s(item.empresa))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(item.sector))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(item.tipo))])
+                ])
+              })
+            )
+          ])
         ]
       ),
       _vm._v(" "),
-      _c("div", { attrs: { id: "empresas-chart" } }),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "tab-pane", attrs: { id: "hv", role: "tabpanel" } },
-        [
-          _vm._m(4),
-          _vm._v(" "),
-          _vm.cvsCargando
-            ? _c("div", { staticClass: "tab-content" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "tab-pane active",
-                    attrs: { id: "DatosCvs", role: "tabpanel" }
-                  },
-                  [
-                    _c(
-                      "table",
-                      { staticClass: "table table-hover table-dark" },
-                      [
-                        _vm._m(5),
-                        _vm._v(" "),
-                        _c("tfoot", [
-                          _c("tr", [
-                            _vm._m(6),
-                            _vm._v(" "),
-                            _c("td", [_c("b", [_vm._v(_vm._s(_vm.sumaCvs))])])
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "tbody",
-                          _vm._l(_vm.listaCvs.lista, function(item) {
-                            return _c("tr", [
-                              _c("td", [_vm._v(_vm._s(item.name))]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v(_vm._s(item.y))])
-                            ])
-                          })
-                        )
-                      ]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c("div", {
-                  staticClass: "tab-pane",
-                  attrs: { id: "GraficoCv", role: "tabpanel" }
-                })
-              ])
-            : _vm._e()
-        ]
-      ),
-      _vm._v(" "),
-      _c("div", { attrs: { id: "cvschart" } })
+      _vm._m(3)
     ])
   ])
 }
@@ -60699,43 +60276,7 @@ var staticRenderFns = [
           _c(
             "a",
             {
-              staticClass: "nav-link btn btn-primary",
-              attrs: {
-                "data-toggle": "tab",
-                href: "#organizaciones",
-                role: "tab"
-              }
-            },
-            [_vm._v("Organizaciones")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "nav-item" }, [
-          _c(
-            "a",
-            {
-              staticClass: "nav-link btn btn-primary",
-              attrs: { "data-toggle": "tab", href: "#hv", role: "tab" }
-            },
-            [_vm._v("Hojas de Vida")]
-          )
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "ul",
-      { staticClass: "nav nav-tabs", attrs: { role: "tablist" } },
-      [
-        _c("li", { staticClass: "nav-item" }, [
-          _c(
-            "a",
-            {
-              staticClass: "nav-link btn btn-info",
+              staticClass: "nav-link btn btn-dark",
               attrs: {
                 "data-toggle": "tab",
                 href: "#DatosOrganizaciones",
@@ -60750,7 +60291,7 @@ var staticRenderFns = [
           _c(
             "a",
             {
-              staticClass: "nav-link btn btn-info",
+              staticClass: "nav-link btn btn-dark",
               attrs: {
                 "data-toggle": "tab",
                 href: "#GraficoOrganizaciones",
@@ -60773,8 +60314,6 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Sector")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Subsector")]),
-        _vm._v(" "),
         _c("th", [_vm._v("Tipo")])
       ])
     ])
@@ -60783,57 +60322,20 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("td", { attrs: { colspan: "3" } }, [_c("b", [_vm._v("TOTAL")])])
+    return _c("td", { attrs: { colspan: "2" } }, [_c("b", [_vm._v("TOTAL")])])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c(
-      "ul",
-      { staticClass: "nav nav-tabs", attrs: { role: "tablist" } },
-      [
-        _c("li", { staticClass: "nav-item" }, [
-          _c(
-            "a",
-            {
-              staticClass: "nav-link btn btn-info",
-              attrs: { "data-toggle": "tab", href: "#DatosCvs", role: "tab" }
-            },
-            [_vm._v("Datos")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "nav-item" }, [
-          _c(
-            "a",
-            {
-              staticClass: "nav-link btn btn-info",
-              attrs: { "data-toggle": "tab", href: "#GraficoCv", role: "tab" }
-            },
-            [_vm._v("Gráfico")]
-          )
-        ])
-      ]
+      "div",
+      {
+        staticClass: "tab-pane",
+        attrs: { id: "GraficoOrganizaciones", role: "tabpanel" }
+      },
+      [_c("div", { attrs: { id: "empresas-chart" } })]
     )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("thead", [
-      _c("tr", [
-        _c("th", [_vm._v("Carrera")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Hojas de Vida")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", [_c("b", [_vm._v("TOTAL")])])
   }
 ]
 render._withStripped = true

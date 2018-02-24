@@ -37,3 +37,13 @@ Route::get('/esmeraldas/estudiantes/{cedula}'  ,'EsmeraldasController@show');
 
 //--ibarra
 Route::get('/ibarra/estudiantes/{cedula}'  ,'IbarraController@show');
+
+
+
+
+/*
+ * Estadisticas
+ *
+ * */
+Route::get('/estadisticas/empresas'  ,'EstadisticasController@empresas');
+Route::get('/estadisticas/cvs'  ,'EstadisticasController@hojasDeVida');
