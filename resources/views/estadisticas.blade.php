@@ -6,45 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{csrf_token()}}">
     <title>PUCE - Dirección General de Estudiantes</title>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="{{mix('css/app.css')}}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 </head>
 <body>
-<div class="tagline-upper text-center text-heading text-shadow text-white mt-5 d-none d-lg-block"><img src="http://be.dgepuce.edu.ec/images/logo_puce.png" alt="puce"> Dirección General de Estudiantes</div>
-<div class="tagline-lower text-center text-expanded text-shadow text-uppercase text-white mb-5 d-none d-lg-block">Pontificia Universidad Católica del Ecuador</div>
-<nav class="navbar navbar-expand-lg navbar-light bg-faded py-lg-4">
-    <div class="container">
-        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item active px-lg-4">
-                    <a class="nav-link text-uppercase text-expanded" href="#">Bolsa de Empleo
-                        <span class="sr-only">(actual)</span>
-                    </a>
-                </li>
-            </ul>
+<div id="app">
+    <header>
+        <nav class="nav-extended light-blue lighten-2" style="padding-top: 10px">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo" style="margin-left: 15px"><img src="{{asset('img/logo_bolsa_blanco.svg')}}" height="60px" ></a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+            <div class="nav-content">
+                <ul class="tabs tabs-transparent">
+                    <li class="tab"><a class="active" href="#organizaciones">Organizaciones</a></li>
+                    <li class="tab"><a href="#hojasDeVida">Hojas de Vida</a></li>
+                    <li class="tab"><a href="#ofertasIngresadas">Ofertas Ingresadas</a></li>
+                    <li class="tab"><a href="#ofertasVigentes">Ofertas Vigentes</a></li>
+                    <li class="tab"><a href="#aplicantes">Aplicantes</a></li>
+                    <li class="tab"><a href="#contratados">Contratados</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div style="margin: 20px 10px 10px 20px">
+            <div id="organizaciones" class="col s12"><estadisticas></estadisticas></div>
+            <div id="hojasDeVida" class="col s12">Test 2</div>
+            <div id="ofertasIngresadas" class="col s12">Test 2</div>
+            <div id="ofertasVigentes" class="col s12">Test 3</div>
+            <div id="aplicantes" class="col s12">Test 4</div>
+            <div id="contratados" class="col s12">Test 4</div>
         </div>
-    </div>
-</nav>
-
-<div class="container-fluid" id="app">
-    <div class="bg-faded p-4 my-4">
-        <hr class="divider">
-        <h2 class="text-center text-lg text-uppercase my-0">Sistema de Bolsa de Empleo y Pasantías PUCE
-        </h2>
-        <hr class="divider">
-        <estadisticas></estadisticas>
-    </div>
-
+    </header>
 </div>
-<footer class="bg-faded text-center py-5">
-    <div class="container">
-        <p class="m-0">Copyright &copy; PUCE {{date('Y')}}</p>
-    </div>
-</footer>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 <script src="{{mix('js/app.js')}}"></script>
 </body>
 </html>
