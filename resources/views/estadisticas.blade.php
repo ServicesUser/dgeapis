@@ -30,12 +30,25 @@
             </div>
         </nav>
         <div style="margin: 20px 10px 10px 20px">
-            <div id="organizaciones" class="col s12"><estadisticas></estadisticas></div>
-            <div id="hojasDeVida" class="col s12">Test 2</div>
-            <div id="ofertasIngresadas" class="col s12">Test 2</div>
-            <div id="ofertasVigentes" class="col s12">Test 3</div>
-            <div id="aplicantes" class="col s12">Test 4</div>
-            <div id="contratados" class="col s12">Test 4</div>
+            <div id="organizaciones" class="col s12 animated fadeIn">
+                <estadisticas></estadisticas>
+                <div class="fixed-action-btn toolbar">
+                    <a class="btn-floating btn-large  light-blue darken-4">
+                        <i class="large material-icons">add</i>
+                    </a>
+                    <ul>
+                        <li class="waves-effect waves-light"><a href="#!">Por nombre</a></li>
+                        <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">format_quote</i></a></li>
+                        <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">publish</i></a></li>
+                        <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">attach_file</i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="hojasDeVida" class="col s12 animated fadeIn">Test 2</div>
+            <div id="ofertasIngresadas" class="col s12 animated fadeIn">Test 2</div>
+            <div id="ofertasVigentes" class="col s12 animated fadeIn">Test 3</div>
+            <div id="aplicantes" class="col s12 animated fadeIn">Test 4</div>
+            <div id="contratados" class="col s12 animated fadeIn">Test 4</div>
         </div>
     </header>
 </div>
