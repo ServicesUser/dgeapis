@@ -47,7 +47,8 @@
                 <estadisticas4></estadisticas4>
             </div>
             <div id="aplicantes" class="col s12 animated fadeIn">
-                Aún no esta no me pegues :(
+                <div id="aplicaciones"></div>
+                <estadisticas5></estadisticas5>
             </div>
             <div id="contratados" class="col s12 animated fadeIn">
                 Aún no esta no me pegues :(

@@ -29,4 +29,12 @@ class EstadisticasController extends Controller{
         return $a;
     }
 
+    public function aplicaciones(){
+        $a['total']         =   DB::connection('basep')->select('SELECT NOMBRE_FAC name,ID_FAC id,(select count(*) from aplica natural join cv natural join inscribe natural join escuelas where ID_FAC=id) y FROM facultades WHERE ID_UNIVERSIDAD=1 ORDER BY name');
+        $a['estudiantes']   =   DB::connection('basep')->select('SELECT NOMBRE_FAC name,ID_FAC id,(select count(*) from aplica natural join cv natural join inscribe natural join escuelas where ID_FAC=id AND APROBADO_INS<150 AND APROBADO_INS>=0) y FROM facultades WHERE ID_UNIVERSIDAD=1 ORDER BY name');
+        $a['egresados']     =   DB::connection('basep')->select('SELECT NOMBRE_FAC name,ID_FAC id,(select count(*) from aplica natural join cv natural join inscribe natural join escuelas where ID_FAC=id AND APROBADO_INS=150) y FROM facultades WHERE ID_UNIVERSIDAD=1 ORDER BY name');
+        $a['graduados']     =   DB::connection('basep')->select('SELECT NOMBRE_FAC name,ID_FAC id,(select count(*) from aplica natural join cv natural join inscribe natural join escuelas where ID_FAC=id AND APROBADO_INS=200) y FROM facultades WHERE ID_UNIVERSIDAD=1 ORDER BY name');
+        return $a;
+    }
+
 }

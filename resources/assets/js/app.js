@@ -16,10 +16,12 @@ window.Vue = require('vue');
  */
 
 Vue.component('buscar', require('./components/buscar.vue'));
+
 Vue.component('estadisticas1', require('./components/estadisticas/e1'));
 Vue.component('estadisticas2', require('./components/estadisticas/e2'));
 Vue.component('estadisticas3', require('./components/estadisticas/e3'));
 Vue.component('estadisticas4', require('./components/estadisticas/e4'));
+Vue.component('estadisticas5', require('./components/estadisticas/e5'));
 
 const app = new Vue({
     el: '#app'
