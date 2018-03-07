@@ -28,6 +28,7 @@
                     <li class="waves-effect waves-light"><a href="#!" v-on:click="seleccionado='estudiantes'">Estudiantes</a></li>
                     <li class="waves-effect waves-light"><a href="#!" v-on:click="seleccionado='egresados'">Egresados</a></li>
                     <li class="waves-effect waves-light"><a href="#!" v-on:click="seleccionado='graduados'">Graduados</a></li>
+                    <li class="waves-effect waves-light"><a href="#!" v-on:click="seleccionado='total'">Total</a></li>
                 </ul>
             </div>
         </div>
@@ -66,7 +67,7 @@
                         text: 'Aplicantes '
                     },
                     subtitle:{
-                        text: window.moment.format('MMMM Do YYYY, h:mm:ss a') + this.seleccionado,
+                        text: window.moment.format('MMMM Do YYYY, h:mm:ss a'),
                     },
                     chart: {
                         plotBackgroundColor: null,
@@ -133,10 +134,10 @@
           seleccionado:function(valor){
               this.aplicacionesGrafico.update({
                   title: {
-                      text: 'Aplicantes ' + valor
+                      text: 'Aplicantes ' + valor.toUpperCase()
                   },
                   subtitle:{
-                      text: window.moment.format('MMMM Do YYYY, h:mm:ss a')+'<br>'+valor
+                      text: window.moment.format('MMMM Do YYYY, h:mm:ss a'),
                   },
                   chart: {
                       plotBackgroundColor: null,

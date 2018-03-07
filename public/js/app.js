@@ -61155,7 +61155,7 @@ exports = module.exports = __webpack_require__(179)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -61471,6 +61471,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
@@ -61492,7 +61493,7 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                     text: 'Aplicantes '
                 },
                 subtitle: {
-                    text: window.moment.format('MMMM Do YYYY, h:mm:ss a') + this.seleccionado
+                    text: window.moment.format('MMMM Do YYYY, h:mm:ss a')
                 },
                 chart: {
                     plotBackgroundColor: null,
@@ -61559,10 +61560,10 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
         seleccionado: function seleccionado(valor) {
             this.aplicacionesGrafico.update({
                 title: {
-                    text: 'Aplicantes ' + valor
+                    text: 'Aplicantes ' + valor.toUpperCase()
                 },
                 subtitle: {
-                    text: window.moment.format('MMMM Do YYYY, h:mm:ss a') + '<br>' + valor
+                    text: window.moment.format('MMMM Do YYYY, h:mm:ss a')
                 },
                 chart: {
                     plotBackgroundColor: null,
@@ -61698,6 +61699,21 @@ var render = function() {
                   }
                 },
                 [_vm._v("Graduados")]
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "waves-effect waves-light" }, [
+              _c(
+                "a",
+                {
+                  attrs: { href: "#!" },
+                  on: {
+                    click: function($event) {
+                      _vm.seleccionado = "total"
+                    }
+                  }
+                },
+                [_vm._v("Total")]
               )
             ])
           ])
