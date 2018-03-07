@@ -119,6 +119,15 @@
                         this.aplicacionesInicio();
                     });
             },
+            actualizar:function(){
+                let vm= this;
+                setInterval(function(){
+                    axios.get('./api/estadisticas/aplicaciones')
+                        .then(response=>{
+                            vm.listaAplicaciones=response.data;
+                        });
+                }, 5000);
+            }
         },
         watch:{
           seleccionado:function(valor){
@@ -180,6 +189,7 @@
         },
         mounted(){
             this.cargarAplicaciones();
+            this.actualizar();
         },
     }
 </script>
