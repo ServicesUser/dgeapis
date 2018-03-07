@@ -1,6 +1,6 @@
 <template>
     <div v-if="empresasCargando">
-        <table class="table table-hover table-dark">
+        <table class="responsive-table highlight">
             <thead>
             <tr>
                 <th>Organización</th>
@@ -104,8 +104,8 @@
                             allowPointSelect: true,
                             cursor: 'pointer',
                             dataLabels: {
-                                enabled: false,
-                                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                                enabled: true,
+                                format: '({point.y}) {point.percentage:.0f}%',
                                 style: {
                                     color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
                                 },
@@ -123,7 +123,7 @@
                         enabled:true,
                     },
                     tooltip: {
-                        pointFormat: '{point.percentage:.1f}%'
+                        pointFormat: '{point.percentage:.2f}%'
                     },
                     series: [{
                         type: 'pie',
@@ -154,8 +154,8 @@
                                 allowPointSelect: true,
                                 cursor: 'pointer',
                                 dataLabels: {
-                                    enabled: false,
-                                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                                    enabled: true,
+                                    format: '({point.y}) {point.percentage:.0f}%',
                                     style: {
                                         color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
                                     },
@@ -173,7 +173,7 @@
                             enabled:true,
                         },
                         tooltip: {
-                            pointFormat: '{point.percentage:.1f}%'
+                            pointFormat: '{point.percentage:.2f}%'
                         },
                         series: [{
                             type: 'pie',
@@ -203,8 +203,8 @@
                                 allowPointSelect: true,
                                 cursor: 'pointer',
                                 dataLabels: {
-                                    enabled: false,
-                                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                                    enabled: true,
+                                    format: '({point.y}) {point.percentage:.0f}%',
                                     style: {
                                         color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
                                     },
@@ -222,7 +222,7 @@
                             enabled:true,
                         },
                         tooltip: {
-                            pointFormat: '{point.percentage:.1f}%'
+                            pointFormat: '{point.percentage:.2f}%'
                         },
                         series: [{
                             type: 'pie',
@@ -252,8 +252,8 @@
                                 allowPointSelect: true,
                                 cursor: 'pointer',
                                 dataLabels: {
-                                    enabled: false,
-                                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                                    enabled: true,
+                                    format: '({point.y}) {point.percentage:.0f}%',
                                     style: {
                                         color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
                                     },
@@ -271,7 +271,7 @@
                             enabled:true,
                         },
                         tooltip: {
-                            pointFormat: '{point.percentage:.1f}%'
+                            pointFormat: '{point.percentage:.2f}%'
                         },
                         series: [{
                             type: 'pie',

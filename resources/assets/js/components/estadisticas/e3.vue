@@ -1,22 +1,28 @@
 <template>
-    <div v-if="cvsCargando">
+    <div v-if="ofertasCargando">
         <table class="responsive-table highlight">
             <thead>
             <tr>
-                <th>Carrera</th>
-                <th>Hojas de Vida</th>
+                <th>Organización</th>
+                <th>Requerimiento</th>
+                <th>Tipo</th>
+                <th>Salario</th>
+                <th>Fecha</th>
             </tr>
             </thead>
             <tfoot>
             <tr>
-                <td><b>TOTAL</b></td>
-                <td><b>{{sumaCvs}}</b></td>
+                <td colspan="3"><b>TOTAL</b></td>
+                <td><b>{{sumaSueldos}}</b></td>
             </tr>
             </tfoot>
             <tbody>
-            <tr v-for="item in listaCvs.lista">
-                <td>{{item.name}}</td>
-                <td>{{item.y}}</td>
+            <tr v-for="item in listaOfertas.lista">
+                <td>{{item.empresa}}</td>
+                <td>{{item.titulo}}</td>
+                <td>{{item.tipo}}</td>
+                <td>{{item.estipendio}}</td>
+                <td>{{item.fecha_publicacion}}</td>
             </tr>
             </tbody>
         </table>
@@ -40,20 +46,20 @@
     import Highcharts from 'highcharts';
     require('highcharts/modules/exporting')(Highcharts);
     export default {
-        name: "e2",
+        name: "e3",
         data:()=>({
-            listaCvs:[],
-            cvsCargando:false,
-            cvsGrafico:null,
+            listaOfertas:[],
+            ofertasCargando:false,
+            ofertasGrafico:null,
         }),
         methods:{
-            cvsInicio:function(){
-                this.cvsGrafico=Highcharts.chart('cvschart', {
+            ofertasInicio:function(){
+                this.ofertasGrafico=Highcharts.chart('ofertas', {
                     title: {
-                        text: 'Hojas de Vida por Carrera'
+                        text: 'Ofertas laborales publicadas'
                     },
                     subtitle:{
-                        text: window.moment.format('MMMM Do YYYY, h:mm:ss a')+'<br><b>'+this.listaCvs.total.numero+' Hojas de Vida</b>'
+                        text: window.moment.format('MMMM Do YYYY, h:mm:ss a')+'<br><b>'+this.listaOfertas.lista.length+' Ofertas</b>'
                     },
                     chart: {
                         plotBackgroundColor: null,
@@ -67,7 +73,7 @@
                             cursor: 'pointer',
                             dataLabels: {
                                 enabled: true,
-                                format: '<b>{point.name}</b> {point.y} {point.percentage:.1f} %',
+                                format: '({point.y}) {point.percentage:.0f}%',
                                 style: {
                                     color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
                                 },
@@ -89,33 +95,33 @@
                     },
                     series: [{
                         type: 'pie',
-                        name:'CVS',
+                        name:'Ofertas laborales hasta la fecha',
                         allowPointSelect: true,
-                        data: this.listaCvs.lista,
+                        data: this.listaOfertas.tipo,
                         showInLegend: true
                     }]
                 });
             },
 
-            cargarCvs:function(){
-                this.cvsCargando=false;
-                axios.get('./api/estadisticas/cvs')
+            cargarOfertas:function(){
+                this.ofertasCargando=false;
+                axios.get('./api/estadisticas/ofertas')
                     .then(response=>{
-                        this.listaCvs=response.data;
-                        this.cvsCargando=true;
-                        this.cvsInicio();
+                        this.listaOfertas=response.data;
+                        this.ofertasCargando=true;
+                        this.ofertasInicio();
                     });
             },
         },
         computed:{
-            sumaCvs:function(){
-                return this.listaCvs.lista.reduce(function (total, value) {
-                    return total + value.y;
+            sumaSueldos:function(){
+                return this.listaOfertas.lista.reduce(function (total, value) {
+                    return total + value.estipendio;
                 }, 0);
             }
         },
         mounted(){
-            this.cargarCvs();
+            this.cargarOfertas();
         },
     }
 </script>

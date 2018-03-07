@@ -39,10 +39,12 @@
                 <estadisticas2></estadisticas2>
             </div>
             <div id="ofertasIngresadas" class="col s12 animated fadeIn">
-                Aún no esta no me pegues :(
+                <div id="ofertas"></div>
+                <estadisticas3></estadisticas3>
             </div>
             <div id="ofertasVigentes" class="col s12 animated fadeIn">
-                Aún no esta no me pegues :(
+                <div id="ofertasVigentes"></div>
+                <estadisticas4></estadisticas4>
             </div>
             <div id="aplicantes" class="col s12 animated fadeIn">
                 Aún no esta no me pegues :(

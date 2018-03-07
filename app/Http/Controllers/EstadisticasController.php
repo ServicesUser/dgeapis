@@ -18,4 +18,15 @@ class EstadisticasController extends Controller{
         $a['total']         =   collect(DB::connection('basep')->select('SELECT count(*) numero FROM cv natural join inscribe natural join estudiantes natural join escuelas natural join facultades where ID_UNIVERSIDAD=1'))->first();
         return $a;
     }
+    public function ofertas(){
+        $a['lista']         =   DB::connection('basep')->select('SELECT TITULO_REQ titulo,REMUNERACION_REQ estipendio,NOMBRE_EMP empresa,FECHAC_REQ fecha_publicacion,NOMBRE_TR tipo FROM requerimientos natural join empresas natural join tipos_req order by FECHAC_REQ');
+        $a['tipo']          =   DB::connection('basep')->select('SELECT NOMBRE_TR name,ID_TR codigo,(select count(*) from requerimientos where ID_TR=codigo) y from tipos_req');
+        return $a;
+    }
+    public function ofertasVigentes(){
+        $a['lista']         =   DB::connection('basep')->select('SELECT TITULO_REQ titulo,REMUNERACION_REQ estipendio,NOMBRE_EMP empresa,FECHAC_REQ fecha_publicacion,NOMBRE_TR tipo FROM requerimientos natural join empresas natural join tipos_req where ESTADO_REQ=1 order by FECHAC_REQ');
+        $a['tipo']          =   DB::connection('basep')->select('SELECT NOMBRE_TR name,ID_TR codigo,(select count(*) from requerimientos where ID_TR=codigo AND ESTADO_REQ=1) y from tipos_req');
+        return $a;
+    }
+
 }
