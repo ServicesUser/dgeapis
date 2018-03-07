@@ -16,7 +16,8 @@ window.Vue = require('vue');
  */
 
 Vue.component('buscar', require('./components/buscar.vue'));
-Vue.component('estadisticas', require('./components/estadisticas'));
+Vue.component('estadisticas1', require('./components/estadisticas/e1'));
+Vue.component('estadisticas2', require('./components/estadisticas/e2'));
 
 const app = new Vue({
     el: '#app'

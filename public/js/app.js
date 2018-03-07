@@ -17303,7 +17303,7 @@ module.exports = function normalizeComponent (
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(132);
-module.exports = __webpack_require__(173);
+module.exports = __webpack_require__(166);
 
 
 /***/ }),
@@ -17328,7 +17328,8 @@ window.Vue = __webpack_require__(157);
  */
 
 Vue.component('buscar', __webpack_require__(160));
-Vue.component('estadisticas', __webpack_require__(163));
+Vue.component('estadisticas1', __webpack_require__(163));
+Vue.component('estadisticas2', __webpack_require__(175));
 
 var app = new Vue({
   el: '#app'
@@ -59221,21 +59222,17 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(164)
-}
 var normalizeComponent = __webpack_require__(130)
 /* script */
-var __vue_script__ = __webpack_require__(169)
+var __vue_script__ = __webpack_require__(164)
 /* template */
-var __vue_template__ = __webpack_require__(172)
+var __vue_template__ = __webpack_require__(165)
 /* template functional */
   var __vue_template_functional__ = false
 /* styles */
-var __vue_styles__ = injectStyle
+var __vue_styles__ = null
 /* scopeId */
-var __vue_scopeId__ = "data-v-8f5c6c20"
+var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -59246,7 +59243,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\estadisticas.vue"
+Component.options.__file = "resources\\assets\\js\\components\\estadisticas\\e1.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
 
 /* hot reload */
@@ -59256,9 +59253,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-8f5c6c20", Component.options)
+    hotAPI.createRecord("data-v-ec2dd8ca", Component.options)
   } else {
-    hotAPI.reload("data-v-8f5c6c20", Component.options)
+    hotAPI.reload("data-v-ec2dd8ca", Component.options)
 ' + '  }
   module.hot.dispose(function (data) {
     disposed = true
@@ -59270,387 +59267,11 @@ module.exports = Component.exports
 
 /***/ }),
 /* 164 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(165);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(167)("70300383", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8f5c6c20\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./estadisticas.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8f5c6c20\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./estadisticas.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 165 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(166)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 166 */
-/***/ (function(module, exports) {
-
-/*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
-*/
-// css base code, injected by the css-loader
-module.exports = function(useSourceMap) {
-	var list = [];
-
-	// return the list of modules as css string
-	list.toString = function toString() {
-		return this.map(function (item) {
-			var content = cssWithMappingToString(item, useSourceMap);
-			if(item[2]) {
-				return "@media " + item[2] + "{" + content + "}";
-			} else {
-				return content;
-			}
-		}).join("");
-	};
-
-	// import a list of modules into the list
-	list.i = function(modules, mediaQuery) {
-		if(typeof modules === "string")
-			modules = [[null, modules, ""]];
-		var alreadyImportedModules = {};
-		for(var i = 0; i < this.length; i++) {
-			var id = this[i][0];
-			if(typeof id === "number")
-				alreadyImportedModules[id] = true;
-		}
-		for(i = 0; i < modules.length; i++) {
-			var item = modules[i];
-			// skip already imported module
-			// this implementation is not 100% perfect for weird media query combinations
-			//  when a module is imported multiple times with different media queries.
-			//  I hope this will never occur (Hey this way we have smaller bundles)
-			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-				if(mediaQuery && !item[2]) {
-					item[2] = mediaQuery;
-				} else if(mediaQuery) {
-					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-				}
-				list.push(item);
-			}
-		}
-	};
-	return list;
-};
-
-function cssWithMappingToString(item, useSourceMap) {
-	var content = item[1] || '';
-	var cssMapping = item[3];
-	if (!cssMapping) {
-		return content;
-	}
-
-	if (useSourceMap && typeof btoa === 'function') {
-		var sourceMapping = toComment(cssMapping);
-		var sourceURLs = cssMapping.sources.map(function (source) {
-			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
-		});
-
-		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
-	}
-
-	return [content].join('\n');
-}
-
-// Adapted from convert-source-map (MIT)
-function toComment(sourceMap) {
-	// eslint-disable-next-line no-undef
-	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
-	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
-
-	return '/*# ' + data + ' */';
-}
-
-
-/***/ }),
-/* 167 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/*
-  MIT License http://www.opensource.org/licenses/mit-license.php
-  Author Tobias Koppers @sokra
-  Modified by Evan You @yyx990803
-*/
-
-var hasDocument = typeof document !== 'undefined'
-
-if (typeof DEBUG !== 'undefined' && DEBUG) {
-  if (!hasDocument) {
-    throw new Error(
-    'vue-style-loader cannot be used in a non-browser environment. ' +
-    "Use { target: 'node' } in your Webpack config to indicate a server-rendering environment."
-  ) }
-}
-
-var listToStyles = __webpack_require__(168)
-
-/*
-type StyleObject = {
-  id: number;
-  parts: Array<StyleObjectPart>
-}
-
-type StyleObjectPart = {
-  css: string;
-  media: string;
-  sourceMap: ?string
-}
-*/
-
-var stylesInDom = {/*
-  [id: number]: {
-    id: number,
-    refs: number,
-    parts: Array<(obj?: StyleObjectPart) => void>
-  }
-*/}
-
-var head = hasDocument && (document.head || document.getElementsByTagName('head')[0])
-var singletonElement = null
-var singletonCounter = 0
-var isProduction = false
-var noop = function () {}
-
-// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
-// tags it will allow on a page
-var isOldIE = typeof navigator !== 'undefined' && /msie [6-9]\b/.test(navigator.userAgent.toLowerCase())
-
-module.exports = function (parentId, list, _isProduction) {
-  isProduction = _isProduction
-
-  var styles = listToStyles(parentId, list)
-  addStylesToDom(styles)
-
-  return function update (newList) {
-    var mayRemove = []
-    for (var i = 0; i < styles.length; i++) {
-      var item = styles[i]
-      var domStyle = stylesInDom[item.id]
-      domStyle.refs--
-      mayRemove.push(domStyle)
-    }
-    if (newList) {
-      styles = listToStyles(parentId, newList)
-      addStylesToDom(styles)
-    } else {
-      styles = []
-    }
-    for (var i = 0; i < mayRemove.length; i++) {
-      var domStyle = mayRemove[i]
-      if (domStyle.refs === 0) {
-        for (var j = 0; j < domStyle.parts.length; j++) {
-          domStyle.parts[j]()
-        }
-        delete stylesInDom[domStyle.id]
-      }
-    }
-  }
-}
-
-function addStylesToDom (styles /* Array<StyleObject> */) {
-  for (var i = 0; i < styles.length; i++) {
-    var item = styles[i]
-    var domStyle = stylesInDom[item.id]
-    if (domStyle) {
-      domStyle.refs++
-      for (var j = 0; j < domStyle.parts.length; j++) {
-        domStyle.parts[j](item.parts[j])
-      }
-      for (; j < item.parts.length; j++) {
-        domStyle.parts.push(addStyle(item.parts[j]))
-      }
-      if (domStyle.parts.length > item.parts.length) {
-        domStyle.parts.length = item.parts.length
-      }
-    } else {
-      var parts = []
-      for (var j = 0; j < item.parts.length; j++) {
-        parts.push(addStyle(item.parts[j]))
-      }
-      stylesInDom[item.id] = { id: item.id, refs: 1, parts: parts }
-    }
-  }
-}
-
-function createStyleElement () {
-  var styleElement = document.createElement('style')
-  styleElement.type = 'text/css'
-  head.appendChild(styleElement)
-  return styleElement
-}
-
-function addStyle (obj /* StyleObjectPart */) {
-  var update, remove
-  var styleElement = document.querySelector('style[data-vue-ssr-id~="' + obj.id + '"]')
-
-  if (styleElement) {
-    if (isProduction) {
-      // has SSR styles and in production mode.
-      // simply do nothing.
-      return noop
-    } else {
-      // has SSR styles but in dev mode.
-      // for some reason Chrome can't handle source map in server-rendered
-      // style tags - source maps in <style> only works if the style tag is
-      // created and inserted dynamically. So we remove the server rendered
-      // styles and inject new ones.
-      styleElement.parentNode.removeChild(styleElement)
-    }
-  }
-
-  if (isOldIE) {
-    // use singleton mode for IE9.
-    var styleIndex = singletonCounter++
-    styleElement = singletonElement || (singletonElement = createStyleElement())
-    update = applyToSingletonTag.bind(null, styleElement, styleIndex, false)
-    remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true)
-  } else {
-    // use multi-style-tag mode in all other cases
-    styleElement = createStyleElement()
-    update = applyToTag.bind(null, styleElement)
-    remove = function () {
-      styleElement.parentNode.removeChild(styleElement)
-    }
-  }
-
-  update(obj)
-
-  return function updateStyle (newObj /* StyleObjectPart */) {
-    if (newObj) {
-      if (newObj.css === obj.css &&
-          newObj.media === obj.media &&
-          newObj.sourceMap === obj.sourceMap) {
-        return
-      }
-      update(obj = newObj)
-    } else {
-      remove()
-    }
-  }
-}
-
-var replaceText = (function () {
-  var textStore = []
-
-  return function (index, replacement) {
-    textStore[index] = replacement
-    return textStore.filter(Boolean).join('\n')
-  }
-})()
-
-function applyToSingletonTag (styleElement, index, remove, obj) {
-  var css = remove ? '' : obj.css
-
-  if (styleElement.styleSheet) {
-    styleElement.styleSheet.cssText = replaceText(index, css)
-  } else {
-    var cssNode = document.createTextNode(css)
-    var childNodes = styleElement.childNodes
-    if (childNodes[index]) styleElement.removeChild(childNodes[index])
-    if (childNodes.length) {
-      styleElement.insertBefore(cssNode, childNodes[index])
-    } else {
-      styleElement.appendChild(cssNode)
-    }
-  }
-}
-
-function applyToTag (styleElement, obj) {
-  var css = obj.css
-  var media = obj.media
-  var sourceMap = obj.sourceMap
-
-  if (media) {
-    styleElement.setAttribute('media', media)
-  }
-
-  if (sourceMap) {
-    // https://developer.chrome.com/devtools/docs/javascript-debugging
-    // this makes source maps inside style tags work properly in Chrome
-    css += '\n/*# sourceURL=' + sourceMap.sources[0] + ' */'
-    // http://stackoverflow.com/a/26603875
-    css += '\n/*# sourceMappingURL=data:application/json;base64,' + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + ' */'
-  }
-
-  if (styleElement.styleSheet) {
-    styleElement.styleSheet.cssText = css
-  } else {
-    while (styleElement.firstChild) {
-      styleElement.removeChild(styleElement.firstChild)
-    }
-    styleElement.appendChild(document.createTextNode(css))
-  }
-}
-
-
-/***/ }),
-/* 168 */
-/***/ (function(module, exports) {
-
-/**
- * Translates the list format produced by css-loader into something
- * easier to manipulate.
- */
-module.exports = function listToStyles (parentId, list) {
-  var styles = []
-  var newStyles = {}
-  for (var i = 0; i < list.length; i++) {
-    var item = list[i]
-    var id = item[0]
-    var css = item[1]
-    var media = item[2]
-    var sourceMap = item[3]
-    var part = {
-      id: parentId + ':' + i,
-      css: css,
-      media: media,
-      sourceMap: sourceMap
-    }
-    if (!newStyles[id]) {
-      styles.push(newStyles[id] = { id: id, parts: [part] })
-    } else {
-      newStyles[id].parts.push(part)
-    }
-  }
-  return styles
-}
-
-
-/***/ }),
-/* 169 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_highcharts__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_highcharts__ = __webpack_require__(173);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_highcharts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_highcharts__);
 //
 //
@@ -59704,71 +59325,29 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
-__webpack_require__(171)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
+__webpack_require__(174)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
 /* harmony default export */ __webpack_exports__["default"] = ({
-    name: "estadisticas",
+    name: "e1",
     data: function data() {
         return {
             listaEmpresas: [],
             empresasCargando: false,
-            empresasGrafico: null,
-
-            listaCvs: [],
-            cvsCargando: false,
-            cvsGrafico: null
+            empresasGrafico: null
         };
     },
     methods: {
+        cargarEmpresas: function cargarEmpresas() {
+            var _this = this;
+
+            this.empresasCargando = false;
+            axios.get('./api/estadisticas/empresas').then(function (response) {
+                _this.listaEmpresas = response.data;
+                _this.empresasCargando = true;
+                _this.empresasInicio();
+            });
+        },
         empresasInicio: function empresasInicio() {
             __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.setOptions({
                 colors: __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.map(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.getOptions().colors, function (color) {
@@ -59979,94 +59558,180 @@ __webpack_require__(171)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                     }]
                 });
             }
-        },
-        cargarEmpresas: function cargarEmpresas() {
-            var _this = this;
-
-            this.empresasCargando = false;
-            axios.get('./api/estadisticas/empresas').then(function (response) {
-                _this.listaEmpresas = response.data;
-                _this.empresasCargando = true;
-                _this.empresasInicio();
-            });
-        },
-
-        cvsInicio: function cvsInicio() {
-            this.cvsGrafico = __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.chart('cvschart', {
-                title: {
-                    text: 'Hojas de Vida por Carrera'
-                },
-                subtitle: {
-                    text: window.moment.format('MMMM Do YYYY, h:mm:ss a') + '<br><b>' + this.listaCvs.total.numero + ' Hojas de Vida</b>'
-                },
-                chart: {
-                    plotBackgroundColor: null,
-                    plotBorderWidth: null,
-                    plotShadow: false,
-                    type: 'pie'
-                },
-                plotOptions: {
-                    pie: {
-                        allowPointSelect: true,
-                        cursor: 'pointer',
-                        dataLabels: {
-                            enabled: false,
-                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-                            style: {
-                                color: __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme && __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme.contrastTextColor || 'black'
-                            },
-                            connectorColor: 'silver'
-                        }
-                    }
-                },
-                credits: {
-                    enabled: true,
-                    href: "http://be.dgepuce.edu.ec",
-                    text: "be.dgepuce.edu.ec"
-                },
-                exporting: {
-                    filename: "Bolsa de Empleos y Pasantías PUCE ",
-                    enabled: true
-                },
-                tooltip: {
-                    pointFormat: '{point.percentage:.1f}%'
-                },
-                series: [{
-                    type: 'pie',
-                    name: 'CVS',
-                    allowPointSelect: true,
-                    data: this.listaCvs.lista,
-                    showInLegend: true
-                }]
-            });
-        },
-
-        cargarCvs: function cargarCvs() {
-            var _this2 = this;
-
-            this.cvsCargando = false;
-            axios.get('./api/estadisticas/cvs').then(function (response) {
-                _this2.listaCvs = response.data;
-                _this2.cvsCargando = true;
-                _this2.cvsInicio();
-            });
-        }
-    },
-    computed: {
-        sumaCvs: function sumaCvs() {
-            return this.listaCvs.lista.reduce(function (total, value) {
-                return total + value.y;
-            }, 0);
         }
     },
     mounted: function mounted() {
         this.cargarEmpresas();
-        this.cargarCvs();
     }
 });
 
 /***/ }),
-/* 170 */
+/* 165 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm.empresasCargando
+    ? _c("div", [
+        _c("table", { staticClass: "table table-hover table-dark" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("tfoot", [
+            _c("tr", [
+              _vm._m(1),
+              _vm._v(" "),
+              _c("td", [
+                _c("b", [_vm._v(_vm._s(_vm.listaEmpresas.lista.length))])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c(
+            "tbody",
+            _vm._l(_vm.listaEmpresas.lista, function(item) {
+              return _c("tr", [
+                _c("td", [_vm._v(_vm._s(item.empresa))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(item.sector))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(item.subsector))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(item.tipo))])
+              ])
+            })
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "fixed-action-btn toolbar" }, [
+          _vm._m(2),
+          _vm._v(" "),
+          _c("ul", [
+            _c("li", { staticClass: "waves-effect waves-light" }, [
+              _c(
+                "a",
+                {
+                  attrs: { href: "#!" },
+                  on: {
+                    click: function($event) {
+                      _vm.empresasChart(1)
+                    }
+                  }
+                },
+                [_vm._v("Sector")]
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "waves-effect waves-light" }, [
+              _c(
+                "a",
+                {
+                  attrs: { href: "#!" },
+                  on: {
+                    click: function($event) {
+                      _vm.empresasChart(2)
+                    }
+                  }
+                },
+                [_vm._v("Subsector")]
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "waves-effect waves-light" }, [
+              _c(
+                "a",
+                {
+                  attrs: { href: "#!" },
+                  on: {
+                    click: function($event) {
+                      _vm.empresasChart(3)
+                    }
+                  }
+                },
+                [_vm._v("Tipo")]
+              )
+            ])
+          ])
+        ])
+      ])
+    : _c("div", { staticClass: "center-align" }, [_vm._m(3)])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [_vm._v("Organización")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Sector")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Subsector")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Tipo")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", { attrs: { colspan: "3" } }, [_c("b", [_vm._v("TOTAL")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      { staticClass: "btn-floating btn-large  light-blue darken-4" },
+      [_c("i", { staticClass: "large material-icons" }, [_vm._v("add")])]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "preloader-wrapper big active" }, [
+      _c("div", { staticClass: "spinner-layer spinner-blue-only" }, [
+        _c("div", { staticClass: "circle-clipper left" }, [
+          _c("div", { staticClass: "circle" })
+        ]),
+        _c("div", { staticClass: "gap-patch" }, [
+          _c("div", { staticClass: "circle" })
+        ]),
+        _c("div", { staticClass: "circle-clipper right" }, [
+          _c("div", { staticClass: "circle" })
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-ec2dd8ca", module.exports)
+  }
+}
+
+/***/ }),
+/* 166 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 167 */,
+/* 168 */,
+/* 169 */,
+/* 170 */,
+/* 171 */,
+/* 172 */,
+/* 173 */
 /***/ (function(module, exports) {
 
 /*
@@ -60465,7 +60130,7 @@ b,l,d){var h;a.objectEach(c,function(a,c){if(!d&&-1<E(c,["series","xAxis","yAxis
 
 
 /***/ }),
-/* 171 */
+/* 174 */
 /***/ (function(module, exports) {
 
 /*
@@ -60497,326 +60162,221 @@ this,b=a.options.exporting,e=b.buttons,c=a.isDirtyExporting||!a.exportSVGElement
 
 
 /***/ }),
-/* 172 */
+/* 175 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(130)
+/* script */
+var __vue_script__ = __webpack_require__(176)
+/* template */
+var __vue_template__ = __webpack_require__(177)
+/* template functional */
+  var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\estadisticas\\e2.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-ec11a9c8", Component.options)
+  } else {
+    hotAPI.reload("data-v-ec11a9c8", Component.options)
+' + '  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 176 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_highcharts__ = __webpack_require__(173);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_highcharts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_highcharts__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+__webpack_require__(174)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: "e2",
+    data: function data() {
+        return {
+            listaCvs: [],
+            cvsCargando: false,
+            cvsGrafico: null
+        };
+    },
+    methods: {
+        cvsInicio: function cvsInicio() {
+            this.cvsGrafico = __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.chart('cvschart', {
+                title: {
+                    text: 'Hojas de Vida por Carrera'
+                },
+                subtitle: {
+                    text: window.moment.format('MMMM Do YYYY, h:mm:ss a') + '<br><b>' + this.listaCvs.total.numero + ' Hojas de Vida</b>'
+                },
+                chart: {
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: false,
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                            style: {
+                                color: __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme && __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme.contrastTextColor || 'black'
+                            },
+                            connectorColor: 'silver'
+                        }
+                    }
+                },
+                credits: {
+                    enabled: true,
+                    href: "http://be.dgepuce.edu.ec",
+                    text: "be.dgepuce.edu.ec"
+                },
+                exporting: {
+                    filename: "Bolsa de Empleos y Pasantías PUCE ",
+                    enabled: true
+                },
+                tooltip: {
+                    pointFormat: '{point.percentage:.1f}%'
+                },
+                series: [{
+                    type: 'pie',
+                    name: 'CVS',
+                    allowPointSelect: true,
+                    data: this.listaCvs.lista,
+                    showInLegend: true
+                }]
+            });
+        },
+
+        cargarCvs: function cargarCvs() {
+            var _this = this;
+
+            this.cvsCargando = false;
+            axios.get('./api/estadisticas/cvs').then(function (response) {
+                _this.listaCvs = response.data;
+                _this.cvsCargando = true;
+                _this.cvsInicio();
+            });
+        }
+    },
+    computed: {
+        sumaCvs: function sumaCvs() {
+            return this.listaCvs.lista.reduce(function (total, value) {
+                return total + value.y;
+            }, 0);
+        }
+    },
+    mounted: function mounted() {
+        this.cargarCvs();
+    }
+});
+
+/***/ }),
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _vm._m(0),
-    _vm._v(" "),
-    _c("div", { staticClass: "tab-content" }, [
-      _c(
-        "div",
-        {
-          staticClass: "tab-pane active",
-          attrs: { id: "organizaciones", role: "tabpanel" }
-        },
-        [
-          _vm._m(1),
+  return _vm.cvsCargando
+    ? _c("div", [
+        _c("table", { staticClass: "table table-hover table-dark" }, [
+          _vm._m(0),
           _vm._v(" "),
-          _vm.empresasCargando
-            ? _c("div", { staticClass: "tab-content" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "tab-pane active",
-                    attrs: { id: "DatosOrganizaciones", role: "tabpanel" }
-                  },
-                  [
-                    _c(
-                      "table",
-                      { staticClass: "table table-hover table-dark" },
-                      [
-                        _vm._m(2),
-                        _vm._v(" "),
-                        _c("tfoot", [
-                          _c("tr", [
-                            _vm._m(3),
-                            _vm._v(" "),
-                            _c("td", [
-                              _c("b", [
-                                _vm._v(_vm._s(_vm.listaEmpresas.lista.length))
-                              ])
-                            ])
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "tbody",
-                          _vm._l(_vm.listaEmpresas.lista, function(item) {
-                            return _c("tr", [
-                              _c("td", [_vm._v(_vm._s(item.empresa))]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v(_vm._s(item.sector))]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v(_vm._s(item.subsector))]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v(_vm._s(item.tipo))])
-                            ])
-                          })
-                        )
-                      ]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "tab-pane",
-                    attrs: { id: "GraficoOrganizaciones", role: "tabpanel" }
-                  },
-                  [
-                    _c(
-                      "div",
-                      {
-                        staticClass: "btn-group",
-                        attrs: { role: "group", "aria-label": "Basic example" }
-                      },
-                      [
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-secondary",
-                            attrs: { type: "button" },
-                            on: {
-                              click: function($event) {
-                                _vm.empresasChart(1)
-                              }
-                            }
-                          },
-                          [_vm._v("Sector")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-secondary",
-                            attrs: { type: "button" },
-                            on: {
-                              click: function($event) {
-                                _vm.empresasChart(2)
-                              }
-                            }
-                          },
-                          [_vm._v("Subsector")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-secondary",
-                            attrs: { type: "button" },
-                            on: {
-                              click: function($event) {
-                                _vm.empresasChart(3)
-                              }
-                            }
-                          },
-                          [_vm._v("Tipo")]
-                        )
-                      ]
-                    )
-                  ]
-                )
-              ])
-            : _vm._e()
-        ]
-      ),
-      _vm._v(" "),
-      _c("div", { attrs: { id: "empresas-chart" } }),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "tab-pane", attrs: { id: "hv", role: "tabpanel" } },
-        [
-          _vm._m(4),
+          _c("tfoot", [
+            _c("tr", [
+              _vm._m(1),
+              _vm._v(" "),
+              _c("td", [_c("b", [_vm._v(_vm._s(_vm.sumaCvs))])])
+            ])
+          ]),
           _vm._v(" "),
-          _vm.cvsCargando
-            ? _c("div", { staticClass: "tab-content" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "tab-pane active",
-                    attrs: { id: "DatosCvs", role: "tabpanel" }
-                  },
-                  [
-                    _c(
-                      "table",
-                      { staticClass: "table table-hover table-dark" },
-                      [
-                        _vm._m(5),
-                        _vm._v(" "),
-                        _c("tfoot", [
-                          _c("tr", [
-                            _vm._m(6),
-                            _vm._v(" "),
-                            _c("td", [_c("b", [_vm._v(_vm._s(_vm.sumaCvs))])])
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "tbody",
-                          _vm._l(_vm.listaCvs.lista, function(item) {
-                            return _c("tr", [
-                              _c("td", [_vm._v(_vm._s(item.name))]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v(_vm._s(item.y))])
-                            ])
-                          })
-                        )
-                      ]
-                    )
-                  ]
-                ),
+          _c(
+            "tbody",
+            _vm._l(_vm.listaCvs.lista, function(item) {
+              return _c("tr", [
+                _c("td", [_vm._v(_vm._s(item.name))]),
                 _vm._v(" "),
-                _c("div", {
-                  staticClass: "tab-pane",
-                  attrs: { id: "GraficoCv", role: "tabpanel" }
-                })
+                _c("td", [_vm._v(_vm._s(item.y))])
               ])
-            : _vm._e()
-        ]
-      ),
-      _vm._v(" "),
-      _c("div", { attrs: { id: "cvschart" } })
-    ])
-  ])
+            })
+          )
+        ])
+      ])
+    : _c("div", { staticClass: "center-align" }, [_vm._m(2)])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "ul",
-      { staticClass: "nav nav-tabs", attrs: { role: "tablist" } },
-      [
-        _c("li", { staticClass: "nav-item" }, [
-          _c(
-            "a",
-            {
-              staticClass: "nav-link btn btn-primary",
-              attrs: {
-                "data-toggle": "tab",
-                href: "#organizaciones",
-                role: "tab"
-              }
-            },
-            [_vm._v("Organizaciones")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "nav-item" }, [
-          _c(
-            "a",
-            {
-              staticClass: "nav-link btn btn-primary",
-              attrs: { "data-toggle": "tab", href: "#hv", role: "tab" }
-            },
-            [_vm._v("Hojas de Vida")]
-          )
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "ul",
-      { staticClass: "nav nav-tabs", attrs: { role: "tablist" } },
-      [
-        _c("li", { staticClass: "nav-item" }, [
-          _c(
-            "a",
-            {
-              staticClass: "nav-link btn btn-info",
-              attrs: {
-                "data-toggle": "tab",
-                href: "#DatosOrganizaciones",
-                role: "tab"
-              }
-            },
-            [_vm._v("Datos")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "nav-item" }, [
-          _c(
-            "a",
-            {
-              staticClass: "nav-link btn btn-info",
-              attrs: {
-                "data-toggle": "tab",
-                href: "#GraficoOrganizaciones",
-                role: "tab"
-              }
-            },
-            [_vm._v("Gráfico")]
-          )
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("thead", [
-      _c("tr", [
-        _c("th", [_vm._v("Organización")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Sector")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Subsector")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Tipo")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", { attrs: { colspan: "3" } }, [_c("b", [_vm._v("TOTAL")])])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "ul",
-      { staticClass: "nav nav-tabs", attrs: { role: "tablist" } },
-      [
-        _c("li", { staticClass: "nav-item" }, [
-          _c(
-            "a",
-            {
-              staticClass: "nav-link btn btn-info",
-              attrs: { "data-toggle": "tab", href: "#DatosCvs", role: "tab" }
-            },
-            [_vm._v("Datos")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "nav-item" }, [
-          _c(
-            "a",
-            {
-              staticClass: "nav-link btn btn-info",
-              attrs: { "data-toggle": "tab", href: "#GraficoCv", role: "tab" }
-            },
-            [_vm._v("Gráfico")]
-          )
-        ])
-      ]
-    )
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -60834,6 +60394,24 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("td", [_c("b", [_vm._v("TOTAL")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "preloader-wrapper big active" }, [
+      _c("div", { staticClass: "spinner-layer spinner-blue-only" }, [
+        _c("div", { staticClass: "circle-clipper left" }, [
+          _c("div", { staticClass: "circle" })
+        ]),
+        _c("div", { staticClass: "gap-patch" }, [
+          _c("div", { staticClass: "circle" })
+        ]),
+        _c("div", { staticClass: "circle-clipper right" }, [
+          _c("div", { staticClass: "circle" })
+        ])
+      ])
+    ])
   }
 ]
 render._withStripped = true
@@ -60841,15 +60419,9 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-8f5c6c20", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-ec11a9c8", module.exports)
   }
 }
-
-/***/ }),
-/* 173 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
