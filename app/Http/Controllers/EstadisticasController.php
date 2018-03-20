@@ -37,4 +37,8 @@ class EstadisticasController extends Controller{
         return $a;
     }
 
+    public function contratados(){
+        $a['lista']         =   DB::connection('basep')->select('select ID_FAC codigo,NOMBRE_FAC name, (select count(*) from contratado natural join estudiantes natural join inscribe natural join escuelas where ID_FAC=codigo) y from facultades where ID_UNIVERSIDAD=1');
+        return $a;
+    }
 }

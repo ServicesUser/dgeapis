@@ -22,6 +22,7 @@ Vue.component('estadisticas2', require('./components/estadisticas/e2'));
 Vue.component('estadisticas3', require('./components/estadisticas/e3'));
 Vue.component('estadisticas4', require('./components/estadisticas/e4'));
 Vue.component('estadisticas5', require('./components/estadisticas/e5'));
+Vue.component('estadisticas6', require('./components/estadisticas/e6'));
 
 const app = new Vue({
     el: '#app'

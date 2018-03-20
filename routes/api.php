@@ -50,3 +50,4 @@ Route::get('/estadisticas/cvs'  ,'EstadisticasController@hojasDeVida');
 Route::get('/estadisticas/ofertas'  ,'EstadisticasController@ofertas');
 Route::get('/estadisticas/vigentes'  ,'EstadisticasController@ofertasVigentes');
 Route::get('/estadisticas/aplicaciones'  ,'EstadisticasController@aplicaciones');
+Route::get('/estadisticas/contratados'  ,'EstadisticasController@contratados');

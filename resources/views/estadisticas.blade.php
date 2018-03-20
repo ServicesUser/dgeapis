@@ -51,7 +51,8 @@
                 <estadisticas5></estadisticas5>
             </div>
             <div id="contratados" class="col s12 animated fadeIn">
-                Aún no esta no me pegues :(
+                <div id="contrataciones"></div>
+                <estadisticas6></estadisticas6>
             </div>
         </div>
     </header>
