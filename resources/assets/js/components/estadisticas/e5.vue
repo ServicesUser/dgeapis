@@ -73,16 +73,21 @@
                         plotBackgroundColor: null,
                         plotBorderWidth: null,
                         plotShadow: false,
-                        type: 'column'
+                        type: 'bar'
                     },
                     xAxis: {
                         type: 'category',
                         labels: {
-                            rotation: -90,
+                            rotation: 0,
                             style: {
                                 fontSize: '8px',
                                 fontFamily: 'Verdana, sans-serif'
                             }
+                        }
+                    },
+                    yAxis: {
+                        title: {
+                            enabled:false
                         }
                     },
                     plotOptions: {
@@ -91,16 +96,13 @@
                             cursor: 'pointer',
                             dataLabels: {
                                 enabled: true,
-                                format: '({point.y}) {point.percentage:.2f}%',
+                                format: '{point.y}',
                                 style: {
                                     color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
                                 },
                                 connectorColor: 'silver'
                             }
                         }
-                    },
-                    legend: {
-                        enabled: false
                     },
                     credits: {
                         enabled: true,
@@ -112,10 +114,10 @@
                         enabled:true,
                     },
                     tooltip: {
-                        pointFormat: '{point.percentage:.2f}%'
+                        pointFormat: '{point}',
                     },
                     series: [{
-                        type: 'column',
+                        type: 'bar',
                         name:'Aplicaciones por facultad',
                         allowPointSelect: true,
                         data: this.listaAplicaciones[this.seleccionado],
@@ -156,7 +158,22 @@
                       plotBackgroundColor: null,
                       plotBorderWidth: null,
                       plotShadow: false,
-                      type: 'column'
+                      type: 'bar'
+                  },
+                  xAxis: {
+                      type: 'category',
+                      labels: {
+                          rotation: 0,
+                          style: {
+                              fontSize: '8px',
+                              fontFamily: 'Verdana, sans-serif'
+                          }
+                      }
+                  },
+                  yAxis: {
+                      title: {
+                          enabled:false
+                      }
                   },
                   plotOptions: {
                       series: {
@@ -164,26 +181,13 @@
                           cursor: 'pointer',
                           dataLabels: {
                               enabled: true,
-                              format: '({point.y}) {point.percentage:.0f}%',
+                              format: '{point.y}',
                               style: {
                                   color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
                               },
                               connectorColor: 'silver'
                           }
                       }
-                  },
-                  xAxis: {
-                      type: 'category',
-                      labels: {
-                          rotation: -90,
-                          style: {
-                              fontSize: '8px',
-                              fontFamily: 'Verdana, sans-serif'
-                          }
-                      }
-                  },
-                  legend: {
-                      enabled: false
                   },
                   credits: {
                       enabled: true,
@@ -195,10 +199,9 @@
                       enabled:true,
                   },
                   tooltip: {
-                      pointFormat: '{point.percentage:.2f}%'
+                      pointFormat: '{point}',
                   },
                   series: [{
-                      type: 'column',
                       name:'Aplicaciones por facultad',
                       allowPointSelect: true,
                       data: this.listaAplicaciones[valor],

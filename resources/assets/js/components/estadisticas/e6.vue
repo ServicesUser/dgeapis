@@ -45,15 +45,30 @@
                         plotBackgroundColor: null,
                         plotBorderWidth: null,
                         plotShadow: false,
-                        type: 'pie'
+                        type: 'bar'
+                    },
+                    xAxis: {
+                        type: 'category',
+                        labels: {
+                            rotation: 0,
+                            style: {
+                                fontSize: '8px',
+                                fontFamily: 'Verdana, sans-serif'
+                            }
+                        }
+                    },
+                    yAxis: {
+                        title: {
+                            enabled:false
+                        }
                     },
                     plotOptions: {
-                        pie: {
+                        series: {
                             allowPointSelect: true,
                             cursor: 'pointer',
                             dataLabels: {
                                 enabled: true,
-                                format: '({point.y}) {point.percentage:.0f}%',
+                                format: '{point.y}',
                                 style: {
                                     color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
                                 },
@@ -71,10 +86,9 @@
                         enabled:true,
                     },
                     tooltip: {
-                        pointFormat: '{point.percentage:.2f}%'
+                        pointFormat: '{point}',
                     },
                     series: [{
-                        type: 'pie',
                         name:'Contratados por facultad',
                         allowPointSelect: true,
                         data: this.listaContratados,

@@ -60112,15 +60112,30 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                     plotBackgroundColor: null,
                     plotBorderWidth: null,
                     plotShadow: false,
-                    type: 'pie'
+                    type: 'bar'
+                },
+                xAxis: {
+                    type: 'category',
+                    labels: {
+                        rotation: 0,
+                        style: {
+                            fontSize: '8px',
+                            fontFamily: 'Verdana, sans-serif'
+                        }
+                    }
+                },
+                yAxis: {
+                    title: {
+                        enabled: false
+                    }
                 },
                 plotOptions: {
-                    pie: {
+                    series: {
                         allowPointSelect: true,
                         cursor: 'pointer',
                         dataLabels: {
                             enabled: true,
-                            format: '({point.y}) {point.percentage:.0f}%',
+                            format: '{point.y}',
                             style: {
                                 color: __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme && __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme.contrastTextColor || 'black'
                             },
@@ -60138,10 +60153,9 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                     enabled: true
                 },
                 tooltip: {
-                    pointFormat: '{point.percentage:.2f}%'
+                    pointFormat: '{point}'
                 },
                 series: [{
-                    type: 'pie',
                     name: 'Sector',
                     allowPointSelect: true,
                     data: this.listaEmpresas.sectores,
@@ -60162,15 +60176,30 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                         plotBackgroundColor: null,
                         plotBorderWidth: null,
                         plotShadow: false,
-                        type: 'pie'
+                        type: 'bar'
+                    },
+                    xAxis: {
+                        type: 'category',
+                        labels: {
+                            rotation: 0,
+                            style: {
+                                fontSize: '8px',
+                                fontFamily: 'Verdana, sans-serif'
+                            }
+                        }
+                    },
+                    yAxis: {
+                        title: {
+                            enabled: false
+                        }
                     },
                     plotOptions: {
-                        pie: {
+                        series: {
                             allowPointSelect: true,
                             cursor: 'pointer',
                             dataLabels: {
                                 enabled: true,
-                                format: '({point.y}) {point.percentage:.0f}%',
+                                format: '{point.y}',
                                 style: {
                                     color: __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme && __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme.contrastTextColor || 'black'
                                 },
@@ -60188,10 +60217,9 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                         enabled: true
                     },
                     tooltip: {
-                        pointFormat: '{point.percentage:.2f}%'
+                        pointFormat: '{point}'
                     },
                     series: [{
-                        type: 'pie',
                         name: 'Sector',
                         allowPointSelect: true,
                         data: this.listaEmpresas.sectores,
@@ -60211,15 +60239,30 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                         plotBackgroundColor: null,
                         plotBorderWidth: null,
                         plotShadow: false,
-                        type: 'pie'
+                        type: 'bar'
+                    },
+                    xAxis: {
+                        type: 'category',
+                        labels: {
+                            rotation: 0,
+                            style: {
+                                fontSize: '8px',
+                                fontFamily: 'Verdana, sans-serif'
+                            }
+                        }
+                    },
+                    yAxis: {
+                        title: {
+                            enabled: false
+                        }
                     },
                     plotOptions: {
-                        pie: {
+                        series: {
                             allowPointSelect: true,
                             cursor: 'pointer',
                             dataLabels: {
                                 enabled: true,
-                                format: '({point.y}) {point.percentage:.0f}%',
+                                format: '{point.y}',
                                 style: {
                                     color: __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme && __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme.contrastTextColor || 'black'
                                 },
@@ -60237,10 +60280,9 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                         enabled: true
                     },
                     tooltip: {
-                        pointFormat: '{point.percentage:.2f}%'
+                        pointFormat: '{point}'
                     },
                     series: [{
-                        type: 'pie',
                         name: 'SubSector',
                         allowPointSelect: true,
                         data: this.listaEmpresas.subsectores,
@@ -60260,15 +60302,30 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                         plotBackgroundColor: null,
                         plotBorderWidth: null,
                         plotShadow: false,
-                        type: 'pie'
+                        type: 'bar'
+                    },
+                    xAxis: {
+                        type: 'category',
+                        labels: {
+                            rotation: 0,
+                            style: {
+                                fontSize: '8px',
+                                fontFamily: 'Verdana, sans-serif'
+                            }
+                        }
+                    },
+                    yAxis: {
+                        title: {
+                            enabled: false
+                        }
                     },
                     plotOptions: {
-                        pie: {
+                        series: {
                             allowPointSelect: true,
                             cursor: 'pointer',
                             dataLabels: {
                                 enabled: true,
-                                format: '({point.y}) {point.percentage:.0f}%',
+                                format: '{point.y}',
                                 style: {
                                     color: __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme && __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme.contrastTextColor || 'black'
                                 },
@@ -60286,10 +60343,9 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                         enabled: true
                     },
                     tooltip: {
-                        pointFormat: '{point.percentage:.2f}%'
+                        pointFormat: '{point}'
                     },
                     series: [{
-                        type: 'pie',
                         name: 'Tipos',
                         allowPointSelect: true,
                         data: this.listaEmpresas.tipos,
@@ -60576,15 +60632,30 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                     plotBackgroundColor: null,
                     plotBorderWidth: null,
                     plotShadow: false,
-                    type: 'pie'
+                    type: 'bar'
+                },
+                xAxis: {
+                    type: 'category',
+                    labels: {
+                        rotation: 0,
+                        style: {
+                            fontSize: '8px',
+                            fontFamily: 'Verdana, sans-serif'
+                        }
+                    }
+                },
+                yAxis: {
+                    title: {
+                        enabled: false
+                    }
                 },
                 plotOptions: {
-                    pie: {
+                    series: {
                         allowPointSelect: true,
                         cursor: 'pointer',
                         dataLabels: {
                             enabled: true,
-                            format: '<b>{point.name}</b> ({point.y}) {point.percentage:.1f} %',
+                            format: '{point.y}',
                             style: {
                                 color: __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme && __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme.contrastTextColor || 'black'
                             },
@@ -60602,10 +60673,9 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                     enabled: true
                 },
                 tooltip: {
-                    pointFormat: '{point.percentage:.2f}%'
+                    pointFormat: '{point}'
                 },
                 series: [{
-                    type: 'pie',
                     name: 'CVS',
                     allowPointSelect: true,
                     data: this.listaCvs.lista,
@@ -60844,15 +60914,30 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                     plotBackgroundColor: null,
                     plotBorderWidth: null,
                     plotShadow: false,
-                    type: 'pie'
+                    type: 'bar'
+                },
+                xAxis: {
+                    type: 'category',
+                    labels: {
+                        rotation: 0,
+                        style: {
+                            fontSize: '8px',
+                            fontFamily: 'Verdana, sans-serif'
+                        }
+                    }
+                },
+                yAxis: {
+                    title: {
+                        enabled: false
+                    }
                 },
                 plotOptions: {
-                    pie: {
+                    series: {
                         allowPointSelect: true,
                         cursor: 'pointer',
                         dataLabels: {
                             enabled: true,
-                            format: '({point.y}) {point.percentage:.0f}%',
+                            format: '{point.y}',
                             style: {
                                 color: __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme && __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme.contrastTextColor || 'black'
                             },
@@ -60870,10 +60955,9 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                     enabled: true
                 },
                 tooltip: {
-                    pointFormat: '{point.percentage:.2f}%'
+                    pointFormat: '{point}'
                 },
                 series: [{
-                    type: 'pie',
                     name: 'Ofertas laborales hasta la fecha',
                     allowPointSelect: true,
                     data: this.listaOfertas.tipo,
@@ -61124,15 +61208,30 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                     plotBackgroundColor: null,
                     plotBorderWidth: null,
                     plotShadow: false,
-                    type: 'pie'
+                    type: 'bar'
+                },
+                xAxis: {
+                    type: 'category',
+                    labels: {
+                        rotation: 0,
+                        style: {
+                            fontSize: '8px',
+                            fontFamily: 'Verdana, sans-serif'
+                        }
+                    }
+                },
+                yAxis: {
+                    title: {
+                        enabled: false
+                    }
                 },
                 plotOptions: {
-                    pie: {
+                    series: {
                         allowPointSelect: true,
                         cursor: 'pointer',
                         dataLabels: {
                             enabled: true,
-                            format: '({point.y}) {point.percentage:.0f}%',
+                            format: '{point.y}',
                             style: {
                                 color: __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme && __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme.contrastTextColor || 'black'
                             },
@@ -61150,10 +61249,9 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                     enabled: true
                 },
                 tooltip: {
-                    pointFormat: '{point.percentage:.2f}%'
+                    pointFormat: '{point}'
                 },
                 series: [{
-                    type: 'pie',
                     name: 'Ofertas laborales vigentes hasta la fecha',
                     allowPointSelect: true,
                     data: this.listaOfertasV.tipo,
@@ -61366,7 +61464,7 @@ exports = module.exports = __webpack_require__(133)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -61489,16 +61587,21 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                     plotBackgroundColor: null,
                     plotBorderWidth: null,
                     plotShadow: false,
-                    type: 'column'
+                    type: 'bar'
                 },
                 xAxis: {
                     type: 'category',
                     labels: {
-                        rotation: -90,
+                        rotation: 0,
                         style: {
                             fontSize: '8px',
                             fontFamily: 'Verdana, sans-serif'
                         }
+                    }
+                },
+                yAxis: {
+                    title: {
+                        enabled: false
                     }
                 },
                 plotOptions: {
@@ -61507,16 +61610,13 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                         cursor: 'pointer',
                         dataLabels: {
                             enabled: true,
-                            format: '({point.y}) {point.percentage:.2f}%',
+                            format: '{point.y}',
                             style: {
                                 color: __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme && __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme.contrastTextColor || 'black'
                             },
                             connectorColor: 'silver'
                         }
                     }
-                },
-                legend: {
-                    enabled: false
                 },
                 credits: {
                     enabled: true,
@@ -61528,10 +61628,10 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                     enabled: true
                 },
                 tooltip: {
-                    pointFormat: '{point.percentage:.2f}%'
+                    pointFormat: '{point}'
                 },
                 series: [{
-                    type: 'column',
+                    type: 'bar',
                     name: 'Aplicaciones por facultad',
                     allowPointSelect: true,
                     data: this.listaAplicaciones[this.seleccionado],
@@ -61572,7 +61672,22 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                     plotBackgroundColor: null,
                     plotBorderWidth: null,
                     plotShadow: false,
-                    type: 'column'
+                    type: 'bar'
+                },
+                xAxis: {
+                    type: 'category',
+                    labels: {
+                        rotation: 0,
+                        style: {
+                            fontSize: '8px',
+                            fontFamily: 'Verdana, sans-serif'
+                        }
+                    }
+                },
+                yAxis: {
+                    title: {
+                        enabled: false
+                    }
                 },
                 plotOptions: {
                     series: {
@@ -61580,26 +61695,13 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                         cursor: 'pointer',
                         dataLabels: {
                             enabled: true,
-                            format: '({point.y}) {point.percentage:.0f}%',
+                            format: '{point.y}',
                             style: {
                                 color: __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme && __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme.contrastTextColor || 'black'
                             },
                             connectorColor: 'silver'
                         }
                     }
-                },
-                xAxis: {
-                    type: 'category',
-                    labels: {
-                        rotation: -90,
-                        style: {
-                            fontSize: '8px',
-                            fontFamily: 'Verdana, sans-serif'
-                        }
-                    }
-                },
-                legend: {
-                    enabled: false
                 },
                 credits: {
                     enabled: true,
@@ -61611,10 +61713,9 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                     enabled: true
                 },
                 tooltip: {
-                    pointFormat: '{point.percentage:.2f}%'
+                    pointFormat: '{point}'
                 },
                 series: [{
-                    type: 'column',
                     name: 'Aplicaciones por facultad',
                     allowPointSelect: true,
                     data: this.listaAplicaciones[valor],
@@ -61881,7 +61982,7 @@ exports = module.exports = __webpack_require__(133)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -61943,15 +62044,30 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                     plotBackgroundColor: null,
                     plotBorderWidth: null,
                     plotShadow: false,
-                    type: 'pie'
+                    type: 'bar'
+                },
+                xAxis: {
+                    type: 'category',
+                    labels: {
+                        rotation: 0,
+                        style: {
+                            fontSize: '8px',
+                            fontFamily: 'Verdana, sans-serif'
+                        }
+                    }
+                },
+                yAxis: {
+                    title: {
+                        enabled: false
+                    }
                 },
                 plotOptions: {
-                    pie: {
+                    series: {
                         allowPointSelect: true,
                         cursor: 'pointer',
                         dataLabels: {
                             enabled: true,
-                            format: '({point.y}) {point.percentage:.0f}%',
+                            format: '{point.y}',
                             style: {
                                 color: __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme && __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme.contrastTextColor || 'black'
                             },
@@ -61969,10 +62085,9 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                     enabled: true
                 },
                 tooltip: {
-                    pointFormat: '{point.percentage:.2f}%'
+                    pointFormat: '{point}'
                 },
                 series: [{
-                    type: 'pie',
                     name: 'Contratados por facultad',
                     allowPointSelect: true,
                     data: this.listaContratados,
