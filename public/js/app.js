@@ -61366,7 +61366,7 @@ exports = module.exports = __webpack_require__(133)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -61491,19 +61491,32 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                     plotShadow: false,
                     type: 'column'
                 },
+                xAxis: {
+                    type: 'category',
+                    labels: {
+                        rotation: -90,
+                        style: {
+                            fontSize: '8px',
+                            fontFamily: 'Verdana, sans-serif'
+                        }
+                    }
+                },
                 plotOptions: {
-                    column: {
+                    series: {
                         allowPointSelect: true,
                         cursor: 'pointer',
                         dataLabels: {
                             enabled: true,
-                            format: '({point.y}) {point.percentage:.0f}%',
+                            format: '({point.y}) {point.percentage:.2f}%',
                             style: {
                                 color: __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme && __WEBPACK_IMPORTED_MODULE_0_highcharts___default.a.theme.contrastTextColor || 'black'
                             },
                             connectorColor: 'silver'
                         }
                     }
+                },
+                legend: {
+                    enabled: false
                 },
                 credits: {
                     enabled: true,
@@ -61562,7 +61575,7 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                     type: 'column'
                 },
                 plotOptions: {
-                    column: {
+                    series: {
                         allowPointSelect: true,
                         cursor: 'pointer',
                         dataLabels: {
@@ -61574,6 +61587,19 @@ __webpack_require__(4)(__WEBPACK_IMPORTED_MODULE_0_highcharts___default.a);
                             connectorColor: 'silver'
                         }
                     }
+                },
+                xAxis: {
+                    type: 'category',
+                    labels: {
+                        rotation: -90,
+                        style: {
+                            fontSize: '8px',
+                            fontFamily: 'Verdana, sans-serif'
+                        }
+                    }
+                },
+                legend: {
+                    enabled: false
                 },
                 credits: {
                     enabled: true,

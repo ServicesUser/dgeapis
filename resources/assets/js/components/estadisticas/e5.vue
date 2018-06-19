@@ -75,19 +75,32 @@
                         plotShadow: false,
                         type: 'column'
                     },
+                    xAxis: {
+                        type: 'category',
+                        labels: {
+                            rotation: -90,
+                            style: {
+                                fontSize: '8px',
+                                fontFamily: 'Verdana, sans-serif'
+                            }
+                        }
+                    },
                     plotOptions: {
-                        column: {
+                        series: {
                             allowPointSelect: true,
                             cursor: 'pointer',
                             dataLabels: {
                                 enabled: true,
-                                format: '({point.y}) {point.percentage:.0f}%',
+                                format: '({point.y}) {point.percentage:.2f}%',
                                 style: {
                                     color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
                                 },
                                 connectorColor: 'silver'
                             }
                         }
+                    },
+                    legend: {
+                        enabled: false
                     },
                     credits: {
                         enabled: true,
@@ -146,7 +159,7 @@
                       type: 'column'
                   },
                   plotOptions: {
-                      column: {
+                      series: {
                           allowPointSelect: true,
                           cursor: 'pointer',
                           dataLabels: {
@@ -158,6 +171,19 @@
                               connectorColor: 'silver'
                           }
                       }
+                  },
+                  xAxis: {
+                      type: 'category',
+                      labels: {
+                          rotation: -90,
+                          style: {
+                              fontSize: '8px',
+                              fontFamily: 'Verdana, sans-serif'
+                          }
+                      }
+                  },
+                  legend: {
+                      enabled: false
                   },
                   credits: {
                       enabled: true,
