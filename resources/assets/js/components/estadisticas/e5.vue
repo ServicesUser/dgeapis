@@ -73,10 +73,10 @@
                         plotBackgroundColor: null,
                         plotBorderWidth: null,
                         plotShadow: false,
-                        type: 'pie'
+                        type: 'column'
                     },
                     plotOptions: {
-                        pie: {
+                        column: {
                             allowPointSelect: true,
                             cursor: 'pointer',
                             dataLabels: {
@@ -102,7 +102,7 @@
                         pointFormat: '{point.percentage:.2f}%'
                     },
                     series: [{
-                        type: 'pie',
+                        type: 'column',
                         name:'Aplicaciones por facultad',
                         allowPointSelect: true,
                         data: this.listaAplicaciones[this.seleccionado],
@@ -143,10 +143,10 @@
                       plotBackgroundColor: null,
                       plotBorderWidth: null,
                       plotShadow: false,
-                      type: 'pie'
+                      type: 'column'
                   },
                   plotOptions: {
-                      pie: {
+                      column: {
                           allowPointSelect: true,
                           cursor: 'pointer',
                           dataLabels: {
@@ -172,7 +172,7 @@
                       pointFormat: '{point.percentage:.2f}%'
                   },
                   series: [{
-                      type: 'pie',
+                      type: 'column',
                       name:'Aplicaciones por facultad',
                       allowPointSelect: true,
                       data: this.listaAplicaciones[valor],
