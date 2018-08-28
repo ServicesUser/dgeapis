@@ -26,7 +26,7 @@ class EsmeraldasController extends Controller{
             ]
         );
         $b=[];
-        if($response && !isset($response->body->name)){
+        if($response && $response->code!==404){
             foreach ($response->body as $item){
                 $a['nombres']   =   mb_convert_case($item->NOMBRES_COMPLETOS, MB_CASE_TITLE);
                 $a['nombre']    =   mb_convert_case($item->NOMBRES, MB_CASE_TITLE);
