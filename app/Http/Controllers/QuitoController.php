@@ -8,7 +8,8 @@ use Unirest\Request as Consulta;
 class QuitoController extends Controller{
     public function show($cedula){
         Consulta::verifyPeer(false);
-        $response = Consulta::get("https://www.puce.edu.ec/intranet/servicios/datos/infoestudiante/cedula/$cedula",
+//        $response = Consulta::get("https://www.puce.edu.ec/intranet/servicios/datos/infoestudiante/cedula/$cedula",
+        $response = Consulta::get("https://apicache.dgepuce.edu.ec/cedula/$cedula",
             [
               "accept"            =>  "rest",
               "postman-token"     =>  "3e4aabde-2190-47f7-991d-01cfacc3cac8",
