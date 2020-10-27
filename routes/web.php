@@ -19,7 +19,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('dni',"ConsultaInterface@index")->name('consulta');
 Route::get('dni/{dni}',"ConsultaInterface@show");
 
-Route::get('/estadisticas', function () {
-    return view('estadisticas');
-});
+//Route::get('/estadisticas', function () {
+//    return view('estadisticas');
+//});
 
