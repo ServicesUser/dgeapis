@@ -5,7 +5,7 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": ">=7.4",
+        "php": ">=7.0.0",
         "artisaninweb/laravel-soap": "0.3.0.7",
         "chrisbjr/api-guard": "^4.1",
         "fideloper/proxy": "^4.0",
