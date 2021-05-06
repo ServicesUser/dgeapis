@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "chart.js": "^2.7.1",
-    "highcharts": "^7.2.2",
+    "highcharts": "^9.0.0",
     "highcharts-exporting": "^0.1.7",
     "moment": "^2.20.1",
     "vue-chartjs": "^3.2.1",
