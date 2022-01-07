@@ -9,7 +9,7 @@
         "artisaninweb/laravel-soap": "0.3.0.7",
         "chrisbjr/api-guard": "^4.1",
         "fideloper/proxy": "~3.3",
-        "laravel/framework": "5.5.*",
+        "laravel/framework": "5.8.*",
         "laravel/tinker": "~1.0",
         "mashape/unirest-php": "^3.0",
         "patricklouys/http": "^1.4"
